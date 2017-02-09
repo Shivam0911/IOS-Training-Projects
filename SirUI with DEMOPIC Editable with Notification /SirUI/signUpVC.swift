@@ -10,6 +10,7 @@ import UIKit
 
 class signUpVC: UIViewController,UITextFieldDelegate {
 //     cell.carNameLabel.text = cars[indexPath.row]["carName"] as? String ?? ""
+    
     let details : [[String:String]] =
         [
             ["label1" : "FullName", "label2" : "Shivam Gaur"],
@@ -23,6 +24,7 @@ class signUpVC: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var mainTableView: UITableView!
     @IBOutlet weak var saveChangesButton: UIButton!
     override func viewDidLoad() {
+        //Notification
         super.viewDidLoad()
         self.title = "Profile Settings" //sets the title of the navBar
         self.mainTableView.dataSource = self
@@ -30,7 +32,27 @@ class signUpVC: UIViewController,UITextFieldDelegate {
         self.mainTableView.backgroundColor = UIColor.clear //sets backgroundColor to Clear
         let cellnib = UINib(nibName: "detailCell", bundle: nil)
         mainTableView.register(cellnib, forCellReuseIdentifier: "DetailsID")
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(self.didSelectKey(notification:)),
+            name: .UIDeviceBatteryLevelDidChange,
+            object: nil)
     }
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
+}
+extension signUpVC {
+    func didSelectKey(notification : Notification){
+    
+        guard let user = notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue else { return}
+        
+        let keyboardHeight = user.cgRectValue.height
+        
+        self.bottomConstraint.constant = keyboardHeight
+        
+    
+    }
+
+
 }
 extension signUpVC : UITableViewDataSource, UITableViewDelegate{
             /*
@@ -50,7 +72,7 @@ extension signUpVC : UITableViewDataSource, UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return details.count + 1 //return no of rows
+        return details.count + 15//return no of rows
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -82,18 +104,18 @@ extension signUpVC {
             let cell = tableView.dequeueReusableCell(withIdentifier: "ImageCellID", for: indexPath) as! ImageCell
             //MARK : clearBackGround(cell)
             return cell
-        }
-        else if  indexPath.row < details.count{
-            let cell2 = tableView.dequeueReusableCell(withIdentifier: "DetailsID", for: indexPath) as! detailCell
-            cell2.processData(details[indexPath.row - 1])
-            return cell2
-        }
-        else{           
+        }  else if indexPath.row == details.count - 1{
             let cell3 = tableView.dequeueReusableCell(withIdentifier: "SaveButtonID", for: indexPath) as! SaveButtonCell
             print("cell3")
             return cell3
         }
-    }
+
+        else {
+            let cell2 = tableView.dequeueReusableCell(withIdentifier: "DetailsID", for: indexPath) as! detailCell
+            cell2.processData(details[indexPath.row - 1])
+            return cell2
+        }
+        }
 }
 //class imageCell is linked with the image inside the cell  and the AddButton
 class ImageCell: UITableViewCell {
