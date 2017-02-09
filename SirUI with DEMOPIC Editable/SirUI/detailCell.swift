@@ -34,9 +34,8 @@ class detailCell: UITableViewCell {
     }
     
     
-    func processData(_ data : [String:String] , _ temp : Int ) {
+    func processData(_ data : [String:String]) {
         labelOne.text = data["label1"]!
-        inputText.text = data["label2"]!
-        
+        inputText.text = data["label2"]!        
     }
 }

@@ -85,13 +85,10 @@ extension signUpVC {
         }
         else if  indexPath.row < details.count{
             let cell2 = tableView.dequeueReusableCell(withIdentifier: "DetailsID", for: indexPath) as! detailCell
-
-            let x = indexPath.row
-            cell2.processData(details[indexPath.row - 1],x)
+            cell2.processData(details[indexPath.row - 1])
             return cell2
         }
-        else{
-            
+        else{           
             let cell3 = tableView.dequeueReusableCell(withIdentifier: "SaveButtonID", for: indexPath) as! SaveButtonCell
             print("cell3")
             return cell3
