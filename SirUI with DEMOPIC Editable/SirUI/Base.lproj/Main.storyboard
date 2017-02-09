@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="elN-KX-zum">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SirUI" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WinterBoardPic" translatesAutoresizingMaskIntoConstraints="NO" id="DWA-Ye-rtH">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qRd-cj-qTN">
+                                <rect key="frame" x="155" y="293" width="65" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="SignUp"/>
+                                <connections>
+                                    <action selector="signUpAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Agh-KQ-uTC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="DWA-Ye-rtH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-64" id="8tR-ZJ-Dno"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DWA-Ye-rtH" secondAttribute="trailing" constant="-16" id="NUw-iQ-6Ew"/>
+                            <constraint firstItem="DWA-Ye-rtH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="hKS-eG-YK2"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="DWA-Ye-rtH" secondAttribute="bottom" id="nmY-Je-6bm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="6fe-9Q-9Ww">
+                        <barButtonItem key="backBarButtonItem" title=" " id="kTL-Vy-M6Q"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1056.8" y="122.78860569715144"/>
+        </scene>
+        <!--Sign UpVC-->
+        <scene sceneID="U4K-wi-NnZ">
+            <objects>
+                <viewController storyboardIdentifier="signUpID" id="d1H-O6-mwR" customClass="signUpVC" customModule="SirUI" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kkQ-Aa-7i5"/>
+                        <viewControllerLayoutGuide type="bottom" id="7ed-FM-FCh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0LS-oC-lpv" customClass="SCNView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" pagingEnabled="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LeI-1v-997">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="separatorColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImageCellID" rowHeight="150" id="ylE-d8-N08" customClass="ImageCell" customModule="SirUI" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" tableViewCell="ylE-d8-N08" id="S8f-2c-wYt">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="steveJObs3" translatesAutoresizingMaskIntoConstraints="NO" id="PxI-ES-Q6b">
+                                                    <rect key="frame" x="142.5" y="30.5" width="90" height="90"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="PxI-ES-Q6b" secondAttribute="height" id="KVp-QR-ktw"/>
+                                                        <constraint firstAttribute="width" constant="90" id="N84-6l-L4G"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hzw-Oy-3Nv">
+                                                    <rect key="frame" x="205.5" y="35.5" width="22" height="22"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="tintColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <state key="normal">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="PxI-ES-Q6b" firstAttribute="centerY" secondItem="S8f-2c-wYt" secondAttribute="centerY" id="3M4-Jj-EKk"/>
+                                                <constraint firstItem="Hzw-Oy-3Nv" firstAttribute="trailing" secondItem="PxI-ES-Q6b" secondAttribute="trailing" constant="-5" id="gp4-Ep-Wmp"/>
+                                                <constraint firstItem="Hzw-Oy-3Nv" firstAttribute="top" secondItem="PxI-ES-Q6b" secondAttribute="top" constant="5" id="nXX-2P-yQo"/>
+                                                <constraint firstItem="PxI-ES-Q6b" firstAttribute="centerX" secondItem="S8f-2c-wYt" secondAttribute="centerX" id="qfs-j3-hTk"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="AddButton" destination="Hzw-Oy-3Nv" id="4IG-LH-Mhk"/>
+                                            <outlet property="imageView1" destination="PxI-ES-Q6b" id="D7L-6g-0rF"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" alpha="0.84999999999999998" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SaveButtonID" id="HlJ-pZ-OY1" customClass="SaveButtonCell" customModule="SirUI" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="178" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HlJ-pZ-OY1" id="TGc-Ne-lDK">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tFb-OA-iJZ">
+                                                    <rect key="frame" x="98" y="0.0" width="179" height="44"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="tFb-OA-iJZ" secondAttribute="height" multiplier="179:44" id="3vU-3G-Z9c"/>
+                                                        <constraint firstAttribute="height" constant="44" id="dAM-hi-4gJ"/>
+                                                        <constraint firstAttribute="width" constant="179" id="dFu-qZ-vYo"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                    <state key="normal" title="Save Changes">
+                                                        <color key="titleColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="tFb-OA-iJZ" firstAttribute="centerX" secondItem="TGc-Ne-lDK" secondAttribute="centerX" id="VEX-Lf-9nC"/>
+                                                <constraint firstItem="tFb-OA-iJZ" firstAttribute="centerY" secondItem="TGc-Ne-lDK" secondAttribute="centerY" id="heY-DI-jfg"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="addBtn" destination="tFb-OA-iJZ" id="mm1-WJ-Z7B"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="LeI-1v-997" firstAttribute="leading" secondItem="0LS-oC-lpv" secondAttribute="leading" id="74u-fc-qrb"/>
+                            <constraint firstAttribute="trailing" secondItem="LeI-1v-997" secondAttribute="trailing" id="HoX-KJ-Gvx"/>
+                            <constraint firstItem="LeI-1v-997" firstAttribute="top" secondItem="kkQ-Aa-7i5" secondAttribute="bottom" id="Iox-K1-6VR"/>
+                            <constraint firstItem="7ed-FM-FCh" firstAttribute="top" secondItem="LeI-1v-997" secondAttribute="bottom" id="Kaz-VL-gMz"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <connections>
+                        <outlet property="mainTableView" destination="LeI-1v-997" id="4QQ-qV-1ri"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="do6-aB-3ax" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1712.8" y="121.88905547226388"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rFo-bo-CN7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="elN-KX-zum" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="t0P-UX-COL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="qQY-be-GmR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kut-dn-Foe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4" y="123"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="WinterBoardPic" width="320" height="480"/>
+        <image name="steveJObs3" width="106" height="84"/>
+    </resources>
+</document>
