@@ -23,6 +23,7 @@ class signUpVC: UIViewController,UITextFieldDelegate {
     ]
     @IBOutlet weak var mainTableView: UITableView!
     @IBOutlet weak var saveChangesButton: UIButton!
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     override func viewDidLoad() {
         //Notification
         super.viewDidLoad()
@@ -34,21 +35,52 @@ class signUpVC: UIViewController,UITextFieldDelegate {
         mainTableView.register(cellnib, forCellReuseIdentifier: "DetailsID")
         NotificationCenter.default.addObserver(
             self,
-            selector: #selector(self.didSelectKey(notification:)),
-            name: .UIDeviceBatteryLevelDidChange,
+            selector: #selector(self.shortenView(notification:)),
+            name: .UIKeyboardDidShow,
+            object: nil)
+    
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(self.extendView(notification:)),
+            name: .UIKeyboardWillHide,
             object: nil)
     }
-    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
+}
+
+
+
+extension signUpVC  {
+    func shortenView(notification : Notification){
+        guard let user = notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue else { return}
+        let keyboardHeight = user.cgRectValue.height
+        self.bottomConstraint.constant = keyboardHeight
+    }
+    func extendView(notification : Notification){
+        self.bottomConstraint.constant = 0
+    }
+    func getIndexPath(textfield : UITextField) ->IndexPath?{
+        var cell : Any = UIView()
+        var texfield : Any = textfield
+        
+        while !(cell as? UITableViewCell){
+            
+            texfield = (texfield as AnyObject).superview!!
+            cell = texfield
+            
+        }
+        print(#function)
+        guard let tableView : Any = (cell as AnyObject).superview as? UITableView
+            else {return nil}
+        
+        guard let index : Any = (tableView as AnyObject).indexPath
+            else {return nil}
+        
+        return index as? IndexPath
+    }
+    
 }
 extension signUpVC {
-    func didSelectKey(notification : Notification){
-    
-        guard let user = notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue else { return}
-        
-        let keyboardHeight = user.cgRectValue.height
-        
-        self.bottomConstraint.constant = keyboardHeight
-        
+    public func textFieldShouldEndEditing(_ textField: UITextField){
     
     }
 
@@ -63,32 +95,24 @@ extension signUpVC : UITableViewDataSource, UITableViewDelegate{
                  cell1.contentView.backgroundColor = UIColor.clear
                  cell1.backgroundColor = UIColor.clear
     }
-    
-    
     override func didReceiveMemoryWarning() {
-    
-        super.didReceiveMemoryWarning()
-        
+                super.didReceiveMemoryWarning()
     }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return details.count + 15//return no of rows
+                return details.count + 15//return no of rows
     }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print(#function,indexPath)
-        return returnCell(tableView,indexPath)
+                print(#function,indexPath)
+                return returnCell(tableView,indexPath)
     }
-    
-    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     
-        if indexPath.row == 0 {
-                  return 150
-        }
-        else {
-                  return 70
-        }
+                if indexPath.row == 0 {
+                        return 150
+                    }
+                    else {
+                        return 70
+                    }
     }
 }
 
@@ -104,18 +128,22 @@ extension signUpVC {
             let cell = tableView.dequeueReusableCell(withIdentifier: "ImageCellID", for: indexPath) as! ImageCell
             //MARK : clearBackGround(cell)
             return cell
-        }  else if indexPath.row == details.count - 1{
-            let cell3 = tableView.dequeueReusableCell(withIdentifier: "SaveButtonID", for: indexPath) as! SaveButtonCell
-            print("cell3")
-            return cell3
         }
-
-        else {
+        else if indexPath.row < details.count - 1{
             let cell2 = tableView.dequeueReusableCell(withIdentifier: "DetailsID", for: indexPath) as! detailCell
             cell2.processData(details[indexPath.row - 1])
             return cell2
         }
+                   else {
+            let cell2 = tableView.dequeueReusableCell(withIdentifier: "DetailsID", for: indexPath) as! detailCell
+            cell2.processData(details[1])
+            return cell2
+//            let cell3 = tableView.dequeueReusableCell(withIdentifier: "SaveButtonID", for: indexPath) as! SaveButtonCell
+//            print("cell3")
+//            return cell3
         }
+    }
+    
 }
 //class imageCell is linked with the image inside the cell  and the AddButton
 class ImageCell: UITableViewCell {
