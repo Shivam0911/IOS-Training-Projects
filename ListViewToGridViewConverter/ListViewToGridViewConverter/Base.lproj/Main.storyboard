@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--List To GridVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ListToGridVC" customModule="ListViewToGridViewConverter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iNf-ry-TWH">
+                                <rect key="frame" x="0.0" y="20" width="375" height="130"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appInventivLogo" translatesAutoresizingMaskIntoConstraints="NO" id="tGY-cb-OIy">
+                                        <rect key="frame" x="15" y="10" width="66" height="66"/>
+                                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="tGY-cb-OIy" secondAttribute="height" id="X9x-YY-TVN"/>
+                                        </constraints>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dmH-Na-qb7" userLabel="LabelView">
+                                        <rect key="frame" x="89" y="10" width="279" height="66"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Car Mafia" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zgI-BJ-rki" userLabel="LabelOne">
+                                                <rect key="frame" x="8" y="8" width="262" height="26"/>
+                                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <color key="highlightedColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20 Photos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ryJ-Vf-E2R" userLabel="LabelTwo">
+                                                <rect key="frame" x="8" y="41" width="262" height="24"/>
+                                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="ryJ-Vf-E2R" secondAttribute="bottom" constant="1" id="5bg-53-S11"/>
+                                            <constraint firstItem="ryJ-Vf-E2R" firstAttribute="height" secondItem="zgI-BJ-rki" secondAttribute="height" constant="-2" id="H3n-iW-eNw"/>
+                                            <constraint firstItem="zgI-BJ-rki" firstAttribute="leading" secondItem="dmH-Na-qb7" secondAttribute="leading" constant="8" id="J08-tK-TOO"/>
+                                            <constraint firstItem="ryJ-Vf-E2R" firstAttribute="leading" secondItem="dmH-Na-qb7" secondAttribute="leading" constant="8" id="WKK-td-f7p"/>
+                                            <constraint firstAttribute="trailing" secondItem="ryJ-Vf-E2R" secondAttribute="trailing" constant="9" id="WmI-HL-237"/>
+                                            <constraint firstItem="zgI-BJ-rki" firstAttribute="top" secondItem="dmH-Na-qb7" secondAttribute="top" constant="8" id="gst-Dd-0dO"/>
+                                            <constraint firstAttribute="trailing" secondItem="zgI-BJ-rki" secondAttribute="trailing" constant="9" id="wvp-WQ-PeP"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V7o-X9-Hzg" userLabel="GridButton">
+                                        <rect key="frame" x="0.0" y="92" width="188" height="38"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="38" id="twU-Jv-sar"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <inset key="imageEdgeInsets" minX="-8" minY="0.0" maxX="0.0" maxY="-1"/>
+                                        <state key="normal" title="Grid Layout" image="gridViewIcon1">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="gridButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gsy-ns-ioz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lT7-y3-LUe" userLabel="ListButton">
+                                        <rect key="frame" x="187.5" y="92" width="187.5" height="38"/>
+                                        <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="38" id="IA3-rS-0Ia"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="-10" minY="2" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="List Layout" image="listimageIcon2">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="listButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mTd-xX-oa9"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="dmH-Na-qb7" firstAttribute="height" secondItem="tGY-cb-OIy" secondAttribute="height" id="9sK-if-jfB"/>
+                                    <constraint firstItem="dmH-Na-qb7" firstAttribute="centerY" secondItem="iNf-ry-TWH" secondAttribute="centerY" constant="-22" id="9va-VY-7Ey"/>
+                                    <constraint firstAttribute="trailing" secondItem="dmH-Na-qb7" secondAttribute="trailing" constant="7" id="Dl2-u9-86h"/>
+                                    <constraint firstItem="V7o-X9-Hzg" firstAttribute="top" secondItem="iNf-ry-TWH" secondAttribute="top" constant="92" id="ErG-v4-g5R"/>
+                                    <constraint firstItem="tGY-cb-OIy" firstAttribute="width" secondItem="iNf-ry-TWH" secondAttribute="width" multiplier="66/375" id="JL0-M2-DIv"/>
+                                    <constraint firstAttribute="height" constant="130" id="NVp-BT-lYi"/>
+                                    <constraint firstItem="tGY-cb-OIy" firstAttribute="centerY" secondItem="iNf-ry-TWH" secondAttribute="centerY" constant="-22" id="bGz-CE-YDk"/>
+                                    <constraint firstItem="tGY-cb-OIy" firstAttribute="leading" secondItem="iNf-ry-TWH" secondAttribute="leading" constant="15" id="hVc-Nh-MEg"/>
+                                    <constraint firstItem="dmH-Na-qb7" firstAttribute="leading" secondItem="tGY-cb-OIy" secondAttribute="trailing" constant="8" id="m23-8H-cPX"/>
+                                    <constraint firstItem="lT7-y3-LUe" firstAttribute="top" secondItem="V7o-X9-Hzg" secondAttribute="top" id="nf4-tG-6DY"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ffg-qw-YQZ">
+                                <rect key="frame" x="0.0" y="150" width="375" height="517"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="sgI-u0-4pd">
+                                    <size key="itemSize" width="100" height="90"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="iNf-ry-TWH" secondAttribute="trailing" id="247-YZ-H7a"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lT7-y3-LUe" secondAttribute="trailing" constant="-16" id="3Vf-tb-9pL"/>
+                            <constraint firstItem="V7o-X9-Hzg" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1:2" id="BcH-wC-Q3q"/>
+                            <constraint firstItem="iNf-ry-TWH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="SF0-sM-OhI"/>
+                            <constraint firstItem="iNf-ry-TWH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="TAa-9Z-kcl"/>
+                            <constraint firstItem="Ffg-qw-YQZ" firstAttribute="top" secondItem="V7o-X9-Hzg" secondAttribute="bottom" id="aXS-K5-Lwd"/>
+                            <constraint firstItem="lT7-y3-LUe" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1:2" id="h5H-V3-Zej"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ffg-qw-YQZ" secondAttribute="bottom" id="hMi-ZC-t6c"/>
+                            <constraint firstItem="V7o-X9-Hzg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="lZF-AA-jIG"/>
+                            <constraint firstItem="Ffg-qw-YQZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="ysn-Ws-ieg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ffg-qw-YQZ" secondAttribute="trailing" constant="-16" id="zAM-8r-lfu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="appInventivLogo" destination="tGY-cb-OIy" id="cmF-Qc-H6L"/>
+                        <outlet property="gridButtonOutlet" destination="V7o-X9-Hzg" id="30N-we-lK4"/>
+                        <outlet property="imageViewCollectionOutlet" destination="Ffg-qw-YQZ" id="Aj2-QU-Eap"/>
+                        <outlet property="listButtonOutlet" destination="lT7-y3-LUe" id="ZEo-XC-UfJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1055.2" y="121.88905547226388"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="appInventivLogo" width="100" height="100"/>
+        <image name="gridViewIcon1" width="30" height="30"/>
+        <image name="listimageIcon2" width="30" height="30"/>
+    </resources>
+</document>
