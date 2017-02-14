@@ -51,6 +51,15 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nzx-DG-lfP">
+                                                <rect key="frame" x="166" y="13" width="57" height="52"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" image="deleteButtonIcon"/>
+                                                <connections>
+                                                    <action selector="deleteButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="csL-cK-jsu"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -136,6 +145,7 @@
                     </view>
                     <connections>
                         <outlet property="appInventivLogo" destination="tGY-cb-OIy" id="cmF-Qc-H6L"/>
+                        <outlet property="deleteButtonOutlet" destination="nzx-DG-lfP" id="hx5-Fn-7PJ"/>
                         <outlet property="gridButtonOutlet" destination="V7o-X9-Hzg" id="30N-we-lK4"/>
                         <outlet property="imageViewCollectionOutlet" destination="Ffg-qw-YQZ" id="Aj2-QU-Eap"/>
                         <outlet property="listButtonOutlet" destination="lT7-y3-LUe" id="ZEo-XC-UfJ"/>
@@ -143,11 +153,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1055.2" y="121.88905547226388"/>
+            <point key="canvasLocation" x="1058" y="128"/>
         </scene>
     </scenes>
     <resources>
         <image name="appInventivLogo" width="100" height="100"/>
+        <image name="deleteButtonIcon" width="256" height="205"/>
         <image name="gridViewIcon1" width="30" height="30"/>
         <image name="listimageIcon2" width="30" height="30"/>
     </resources>

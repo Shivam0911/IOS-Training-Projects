@@ -13,6 +13,7 @@ enum ButtonPressed{
 }
 
 class ListToGridVC: UIViewController {
+        var selectedArray = [IndexPath]()
         var buttonPressed = ButtonPressed.gridButtonPressed
         let carData = CarData()
         let listLayout = ProductsListFlowLayout()
@@ -21,8 +22,10 @@ class ListToGridVC: UIViewController {
         @IBOutlet weak var listButtonOutlet: UIButton!
         @IBOutlet weak var gridButtonOutlet: UIButton!
         @IBOutlet weak var imageViewCollectionOutlet: UICollectionView!
+        @IBOutlet weak var deleteButtonOutlet: UIButton!
+        //MARK: ViewLife Cycle
         override func viewDidLoad() {
-        super.viewDidLoad()
+            super.viewDidLoad()
             imageViewCollectionOutlet.dataSource = self
             imageViewCollectionOutlet.delegate = self
             let listcellnib = UINib(nibName: "listViewCell", bundle: nil)
@@ -30,12 +33,30 @@ class ListToGridVC: UIViewController {
             let gridcellnib = UINib(nibName: "GridViewCell", bundle: nil)
             imageViewCollectionOutlet.register(gridcellnib, forCellWithReuseIdentifier: "GridCellID")
             appInventivLogo.layer.cornerRadius = appInventivLogo.layer.bounds.width/2
+            //MARK:Register GestureRecogniser
+            let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(self.selectOnPress))
+            longPressGesture.delegate = self
+            imageViewCollectionOutlet.addGestureRecognizer(longPressGesture)
+            longPressGesture.minimumPressDuration = 0.3
+            deleteButtonOutlet.isHidden = true
+            deleteButtonOutlet.layer.cornerRadius = deleteButtonOutlet.layer.bounds.height/2
         }
         override func viewWillAppear(_ animated: Bool) {
             super.viewWillAppear(animated)
             self.imageViewCollectionOutlet.collectionViewLayout.invalidateLayout()
             self.imageViewCollectionOutlet.setCollectionViewLayout(self.gridLayout, animated: true)
         }
+        //MARK: deleteButtonAction
+    
+        @IBAction func deleteButtonAction(_ sender: UIButton) {
+       // perform deletion of selected element
+        for indexPath in selectedArray.sorted(by: >){
+            carData.car.remove(at: indexPath.item)
+        }
+        imageViewCollectionOutlet.reloadData()
+        selectedArray = [IndexPath]()
+    
+    }
 }
 extension ListToGridVC : UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
         func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -99,13 +120,14 @@ extension ListToGridVC : UICollectionViewDataSource, UICollectionViewDelegate, U
 
 }
 
-extension ListToGridVC {
+extension ListToGridVC : UIGestureRecognizerDelegate{
         //MARK: ReturnGridCell Method
         func returnGridCell(_ collectionView: UICollectionView,_ indexPath: IndexPath) -> UICollectionViewCell {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GridCellID", for: indexPath) as? GridViewCell else{
                     fatalError("Cell Not Found !")
                     }
             cell.populateTheDataInGridView(carData.car[indexPath.item] as! [String : String])
+            cell.backgroundColor = nil
             return cell
         }
         //MARK: ReturnListCell Method
@@ -113,9 +135,35 @@ extension ListToGridVC {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ListID", for: indexPath) as? listViewCell else{
                     fatalError("Cell Not Found !")
                     }
+            cell.backgroundColor = nil
             cell.populateTheData(carData.car[indexPath.item] as! [String : String])
             return cell
         }
+        //MARK: GestureRecogniser Selector Method selectOnPress
+        func selectOnPress(gesture : UILongPressGestureRecognizer){
+            deleteButtonOutlet.isHidden = false
+            gesture.minimumPressDuration = 0.02
+            if gesture.state == .ended{
+                return
+            }
+            let pressPoint = gesture.location(in: self.imageViewCollectionOutlet)
+            if let indexPath = self.imageViewCollectionOutlet.indexPathForItem(at: pressPoint){
+                    let cell = self.imageViewCollectionOutlet.cellForItem(at: indexPath)
+                    cell?.isSelected = true
+                    if selectedArray.contains(indexPath){
+                        selectedArray.remove(at: selectedArray.index(of: indexPath)!)
+                        cell?.isSelected = false
+                        cell?.backgroundColor = nil
+                    }
+                    else{
+                        selectedArray.append(indexPath)
+                        cell?.backgroundColor = UIColor.gray
+                    }
+                print(selectedArray)
+            }
+            
+        }
     
 }
+
 
