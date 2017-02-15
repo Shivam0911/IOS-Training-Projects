@@ -24,5 +24,6 @@ class GridViewCell: UICollectionViewCell {
     carName.text = data["CarName"]!
     }
     
+    
 
 }

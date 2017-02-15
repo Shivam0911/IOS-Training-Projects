@@ -19,6 +19,7 @@
 		044CDCA61E519B77007D06EA /* listViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 044CDCA41E519B77007D06EA /* listViewCell.xib */; };
 		044CDCA91E51A38E007D06EA /* GridViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044CDCA71E51A38E007D06EA /* GridViewCell.swift */; };
 		044CDCAA1E51A38E007D06EA /* GridViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 044CDCA81E51A38E007D06EA /* GridViewCell.xib */; };
+		0497DFAA1E547AD600885EC6 /* GridCellHoverLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0497DFA91E547AD600885EC6 /* GridCellHoverLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		044CDCA41E519B77007D06EA /* listViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = listViewCell.xib; sourceTree = "<group>"; };
 		044CDCA71E51A38E007D06EA /* GridViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridViewCell.swift; sourceTree = "<group>"; };
 		044CDCA81E51A38E007D06EA /* GridViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GridViewCell.xib; sourceTree = "<group>"; };
+		0497DFA91E547AD600885EC6 /* GridCellHoverLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridCellHoverLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				044CDC981E517CBD007D06EA /* LaunchScreen.storyboard */,
 				044CDC9B1E517CBD007D06EA /* Info.plist */,
 				040B963D1E51AB8700B6AD8D /* CarData.swift */,
+				0497DFA91E547AD600885EC6 /* GridCellHoverLayout.swift */,
 			);
 			path = ListViewToGridViewConverter;
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 				041C0DA11E52E6FC0085CBE9 /* ProductsGridFlowLayout.swift in Sources */,
 				044CDCA51E519B77007D06EA /* listViewCell.swift in Sources */,
 				040B963E1E51AB8700B6AD8D /* CarData.swift in Sources */,
+				0497DFAA1E547AD600885EC6 /* GridCellHoverLayout.swift in Sources */,
 				044CDCA91E51A38E007D06EA /* GridViewCell.swift in Sources */,
 				041C0DA31E52E79B0085CBE9 /* ProductsListFlowLayout.swift in Sources */,
 				044CDCA21E5180C9007D06EA /* ListToGridVC.swift in Sources */,

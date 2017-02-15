@@ -13,18 +13,21 @@ enum ButtonPressed{
 }
 
 class ListToGridVC: UIViewController {
-    var selectedArray = [IndexPath]()
-    var buttonPressed = ButtonPressed.gridButtonPressed
-    let carData = CarData()
-    let listLayout = ProductsListFlowLayout()
-    let gridLayout = ProductsGridFlowLayout()
     @IBOutlet weak var appInventivLogo: UIImageView!
     @IBOutlet weak var listButtonOutlet: UIButton!
     @IBOutlet weak var gridButtonOutlet: UIButton!
     @IBOutlet weak var imageViewCollectionOutlet: UICollectionView!
     @IBOutlet weak var deleteButtonOutlet: UIButton!
     @IBOutlet weak var noOfPhotos: UILabel!
-    
+    let gridCellHover = GridCellHoverLayout()
+    let gridCell = GridViewCell()
+    let listCell = listViewCell()
+    var selectedArray = [IndexPath]()
+    var buttonPressed = ButtonPressed.gridButtonPressed
+    let carData = CarData()
+    let listLayout = ProductsListFlowLayout()
+    let gridLayout = ProductsGridFlowLayout()
+
     //MARK: ViewLife Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +38,8 @@ class ListToGridVC: UIViewController {
         let gridcellnib = UINib(nibName: "GridViewCell", bundle: nil)
         imageViewCollectionOutlet.register(gridcellnib, forCellWithReuseIdentifier: "GridCellID")
         appInventivLogo.layer.cornerRadius = appInventivLogo.layer.bounds.width/2
-        //MARK:Register GestureRecogniser
+        
+    //MARK:Register GestureRecogniser
         let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(self.selectOnPress))
         longPressGesture.delegate = self
         imageViewCollectionOutlet.addGestureRecognizer(longPressGesture)
@@ -55,12 +59,14 @@ class ListToGridVC: UIViewController {
     //MARK: deleteButtonAction
     @IBAction func deleteButtonAction(_ sender: UIButton) {
         
+        imageViewCollectionOutlet.allowsSelection = false
         let countOfTotalPhotos = carData.car.count
         for indexPath in selectedArray.sorted(by: >){
             carData.car.remove(at: indexPath.item)
             imageViewCollectionOutlet.deleteItems(at: [indexPath])
         }
         noOfPhotos.text = "\(countOfTotalPhotos - selectedArray.count) Photos"
+    
     //MARK: imageViewCollectionOutlet.reloadData()
         deleteButtonOutlet.isHidden = true
         selectedArray = [IndexPath]()
@@ -71,16 +77,24 @@ class ListToGridVC: UIViewController {
         let cell = collectionView.cellForItem(at: indexPath)
         cell?.backgroundColor = UIColor.gray
         selectedArray.append(indexPath)
-        
+        UIView.animate(withDuration: 0.5,delay : 0.0,options : .repeat , animations: {
+            //cell?.alpha = 0.0
+            cell?.frame.origin.x += 10
+            cell?.frame.origin.x -= 10
+//            cell?.frame.origin.y += 5
+//            cell?.frame.origin.y -= 5
+        })
     }
-    
     //MARK: didDeselect Method
     func collectionView(_ collectionView: UICollectionView , didDeselectItemAt indexPath: IndexPath ){
         let cell = collectionView.cellForItem(at: indexPath)
         selectedArray.remove(at: selectedArray.index(of: indexPath)!)
         cell?.backgroundColor = nil
-        deleteButtonOutlet.isHidden = true
         
+        print("didselect\(selectedArray)")
+        if selectedArray.count == 0{
+             deleteButtonOutlet.isHidden = true
+            }
     }
 }
 
@@ -117,13 +131,7 @@ extension ListToGridVC : UICollectionViewDataSource, UICollectionViewDelegate, U
         imageViewCollectionOutlet.reloadData()
         changebackGroundOfButton(sender)
         listButtonOutlet.backgroundColor = UIColor.lightGray
-        let when = DispatchTime.now() + 2 // change 2 to desired number of seconds
-        UIView.animate(withDuration: 0.8) { () -> Void in
-            self.imageViewCollectionOutlet.collectionViewLayout.invalidateLayout()
-            self.imageViewCollectionOutlet.setCollectionViewLayout(self.gridLayout, animated: true)
-        }
-        DispatchQueue.main.asyncAfter(deadline: when) {
-        }
+        animateObject(self.gridLayout)
     }
     
     //MARK: ListButtonAction Method
@@ -132,13 +140,7 @@ extension ListToGridVC : UICollectionViewDataSource, UICollectionViewDelegate, U
         imageViewCollectionOutlet.reloadData()
         changebackGroundOfButton(sender)
         gridButtonOutlet.backgroundColor = UIColor.lightGray
-        UIView.animate(withDuration: 0.8) { () -> Void in
-            self.imageViewCollectionOutlet.collectionViewLayout.invalidateLayout()
-            self.imageViewCollectionOutlet.setCollectionViewLayout(self.listLayout, animated: true)
-        }
-        let when = DispatchTime.now() + 2 // change 2 to desired number of seconds
-        DispatchQueue.main.asyncAfter(deadline: when) {
-        }
+        animateObject(self.listLayout)
     }
     
     //MARK: changebackGroundOfButton Method
@@ -173,6 +175,7 @@ extension ListToGridVC : UIGestureRecognizerDelegate{
     func selectOnPress(gesture : UILongPressGestureRecognizer){
         deleteButtonOutlet.isHidden = false
         imageViewCollectionOutlet.allowsMultipleSelection = true
+        
         if gesture.state == .ended{
             return
         }
@@ -186,6 +189,17 @@ extension ListToGridVC : UIGestureRecognizerDelegate{
             print("no cell found with index")
             imageViewCollectionOutlet.allowsMultipleSelection = false
         }
+    }
+    //MARK: animateObject 
+    func animateObject(_ layoutObject : UICollectionViewLayout){
+        let when = DispatchTime.now() + 2 // change 2 to desired number of seconds
+        UIView.animate(withDuration: 0.8) { () -> Void in
+            self.imageViewCollectionOutlet.collectionViewLayout.invalidateLayout()
+            self.imageViewCollectionOutlet.setCollectionViewLayout(layoutObject , animated: true)
+        }
+        DispatchQueue.main.asyncAfter(deadline: when) {
+        }
+    
     }
 }
 
