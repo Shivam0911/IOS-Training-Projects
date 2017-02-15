@@ -70,6 +70,7 @@
 			children = (
 				044CDC8F1E517CBD007D06EA /* AppDelegate.swift */,
 				041C0DA01E52E6FC0085CBE9 /* ProductsGridFlowLayout.swift */,
+				041C0DA21E52E79B0085CBE9 /* ProductsListFlowLayout.swift */,
 				044CDCA71E51A38E007D06EA /* GridViewCell.swift */,
 				044CDCA81E51A38E007D06EA /* GridViewCell.xib */,
 				044CDCA31E519B77007D06EA /* listViewCell.swift */,
@@ -80,7 +81,6 @@
 				044CDC981E517CBD007D06EA /* LaunchScreen.storyboard */,
 				044CDC9B1E517CBD007D06EA /* Info.plist */,
 				040B963D1E51AB8700B6AD8D /* CarData.swift */,
-				041C0DA21E52E79B0085CBE9 /* ProductsListFlowLayout.swift */,
 			);
 			path = ListViewToGridViewConverter;
 			sourceTree = "<group>";
