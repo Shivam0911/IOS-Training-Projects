@@ -77,14 +77,17 @@ class ListToGridVC: UIViewController {
         let cell = collectionView.cellForItem(at: indexPath)
         cell?.backgroundColor = UIColor.gray
         selectedArray.append(indexPath)
-        UIView.animate(withDuration: 0.5,delay : 0.0,options : .repeat , animations: {
-            //cell?.alpha = 0.0
-            cell?.frame.origin.x += 10
-            cell?.frame.origin.x -= 10
-//            cell?.frame.origin.y += 5
-//            cell?.frame.origin.y -= 5
-        })
+//        let anime = CABasicAnimation(keyPath: "Opacity")
+//        anime.fromValue = 1.0
+//        anime.toValue = 0.3
+//        anime.duration = 1.0
+        
+//        UIView.animate(withDuration: 0.5,delay : 0.0,options : .repeat , animations: {
+//            //cell?.alpha = 0.0
+//            cell?.frame.origin.x += 5
+//        })
     }
+    
     //MARK: didDeselect Method
     func collectionView(_ collectionView: UICollectionView , didDeselectItemAt indexPath: IndexPath ){
         let cell = collectionView.cellForItem(at: indexPath)
@@ -104,9 +107,11 @@ extension ListToGridVC : UICollectionViewDataSource, UICollectionViewDelegate, U
     }
     
     // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
+    //MARK:
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if  indexPath.row < carData.car.count {
+        if  indexPath.item < carData.car.count {
             if buttonPressed == .gridButtonPressed {
+                
                 let cell1 = returnGridCell(collectionView,indexPath)
                 return cell1
             }
@@ -157,7 +162,16 @@ extension ListToGridVC : UIGestureRecognizerDelegate{
             fatalError("Cell Not Found !")
         }
         cell.populateTheDataInGridView(carData.car[indexPath.item] as! [String : String])
-        cell.backgroundColor = nil
+        if selectedArray.isEmpty{
+            cell.backgroundColor = nil
+        }
+        else{
+            for index in selectedArray{
+                if indexPath == index{
+                    cell.backgroundColor = UIColor.gray
+                }
+            }
+        }
         return cell
     }
     
@@ -166,7 +180,16 @@ extension ListToGridVC : UIGestureRecognizerDelegate{
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ListID", for: indexPath) as? listViewCell else{
             fatalError("Cell Not Found !")
         }
+        if selectedArray.isEmpty{
         cell.backgroundColor = nil
+        }
+        else{
+            for index in selectedArray{
+                if indexPath == index{
+                        cell.backgroundColor = UIColor.gray
+                }
+            }
+        }
         cell.populateTheData(carData.car[indexPath.item] as! [String : String])
         return cell
     }
