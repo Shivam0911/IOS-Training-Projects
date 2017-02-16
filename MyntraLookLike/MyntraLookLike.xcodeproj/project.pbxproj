@@ -1,0 +1,335 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		048F42A91E557E6A009AC22D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048F42A81E557E6A009AC22D /* AppDelegate.swift */; };
+		048F42AE1E557E6A009AC22D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048F42AC1E557E6A009AC22D /* Main.storyboard */; };
+		048F42B01E557E6A009AC22D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 048F42AF1E557E6A009AC22D /* Assets.xcassets */; };
+		048F42B31E557E6A009AC22D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048F42B11E557E6A009AC22D /* LaunchScreen.storyboard */; };
+		048F42C51E558573009AC22D /* TableSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048F42C41E558573009AC22D /* TableSectionHeader.xib */; };
+		048F42C71E558FAD009AC22D /* MyntraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048F42C61E558FAD009AC22D /* MyntraVC.swift */; };
+		048F42CA1E559080009AC22D /* VehicleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048F42C81E559080009AC22D /* VehicleCell.swift */; };
+		048F42CB1E559080009AC22D /* VehicleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048F42C91E559080009AC22D /* VehicleCell.xib */; };
+		048F42CE1E5591DA009AC22D /* VehicleCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048F42CC1E5591DA009AC22D /* VehicleCollectionCell.swift */; };
+		048F42CF1E5591DA009AC22D /* VehicleCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048F42CD1E5591DA009AC22D /* VehicleCollectionCell.xib */; };
+		048F42D11E55C194009AC22D /* TableSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048F42D01E55C194009AC22D /* TableSectionHeader.swift */; };
+		048F42D31E55E026009AC22D /* JsonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048F42D21E55E026009AC22D /* JsonData.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		048F42A51E557E6A009AC22D /* MyntraLookLike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyntraLookLike.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		048F42A81E557E6A009AC22D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		048F42AD1E557E6A009AC22D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		048F42AF1E557E6A009AC22D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		048F42B21E557E6A009AC22D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		048F42B41E557E6A009AC22D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		048F42C41E558573009AC22D /* TableSectionHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableSectionHeader.xib; sourceTree = "<group>"; };
+		048F42C61E558FAD009AC22D /* MyntraVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyntraVC.swift; sourceTree = "<group>"; };
+		048F42C81E559080009AC22D /* VehicleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleCell.swift; sourceTree = "<group>"; };
+		048F42C91E559080009AC22D /* VehicleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VehicleCell.xib; sourceTree = "<group>"; };
+		048F42CC1E5591DA009AC22D /* VehicleCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleCollectionCell.swift; sourceTree = "<group>"; };
+		048F42CD1E5591DA009AC22D /* VehicleCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VehicleCollectionCell.xib; sourceTree = "<group>"; };
+		048F42D01E55C194009AC22D /* TableSectionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableSectionHeader.swift; sourceTree = "<group>"; };
+		048F42D21E55E026009AC22D /* JsonData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonData.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		048F42A21E557E6A009AC22D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		048F429C1E557E69009AC22D = {
+			isa = PBXGroup;
+			children = (
+				048F42A71E557E6A009AC22D /* MyntraLookLike */,
+				048F42A61E557E6A009AC22D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		048F42A61E557E6A009AC22D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				048F42A51E557E6A009AC22D /* MyntraLookLike.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		048F42A71E557E6A009AC22D /* MyntraLookLike */ = {
+			isa = PBXGroup;
+			children = (
+				048F42A81E557E6A009AC22D /* AppDelegate.swift */,
+				048F42C61E558FAD009AC22D /* MyntraVC.swift */,
+				048F42CC1E5591DA009AC22D /* VehicleCollectionCell.swift */,
+				048F42CD1E5591DA009AC22D /* VehicleCollectionCell.xib */,
+				048F42C81E559080009AC22D /* VehicleCell.swift */,
+				048F42C91E559080009AC22D /* VehicleCell.xib */,
+				048F42D01E55C194009AC22D /* TableSectionHeader.swift */,
+				048F42C41E558573009AC22D /* TableSectionHeader.xib */,
+				048F42AC1E557E6A009AC22D /* Main.storyboard */,
+				048F42AF1E557E6A009AC22D /* Assets.xcassets */,
+				048F42B11E557E6A009AC22D /* LaunchScreen.storyboard */,
+				048F42B41E557E6A009AC22D /* Info.plist */,
+				048F42D21E55E026009AC22D /* JsonData.swift */,
+			);
+			path = MyntraLookLike;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		048F42A41E557E6A009AC22D /* MyntraLookLike */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 048F42B71E557E6A009AC22D /* Build configuration list for PBXNativeTarget "MyntraLookLike" */;
+			buildPhases = (
+				048F42A11E557E6A009AC22D /* Sources */,
+				048F42A21E557E6A009AC22D /* Frameworks */,
+				048F42A31E557E6A009AC22D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyntraLookLike;
+			productName = MyntraLookLike;
+			productReference = 048F42A51E557E6A009AC22D /* MyntraLookLike.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		048F429D1E557E69009AC22D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = Appinventiv;
+				TargetAttributes = {
+					048F42A41E557E6A009AC22D = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 048F42A01E557E69009AC22D /* Build configuration list for PBXProject "MyntraLookLike" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 048F429C1E557E69009AC22D;
+			productRefGroup = 048F42A61E557E6A009AC22D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				048F42A41E557E6A009AC22D /* MyntraLookLike */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		048F42A31E557E6A009AC22D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				048F42B31E557E6A009AC22D /* LaunchScreen.storyboard in Resources */,
+				048F42CB1E559080009AC22D /* VehicleCell.xib in Resources */,
+				048F42C51E558573009AC22D /* TableSectionHeader.xib in Resources */,
+				048F42B01E557E6A009AC22D /* Assets.xcassets in Resources */,
+				048F42CF1E5591DA009AC22D /* VehicleCollectionCell.xib in Resources */,
+				048F42AE1E557E6A009AC22D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		048F42A11E557E6A009AC22D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				048F42CA1E559080009AC22D /* VehicleCell.swift in Sources */,
+				048F42CE1E5591DA009AC22D /* VehicleCollectionCell.swift in Sources */,
+				048F42A91E557E6A009AC22D /* AppDelegate.swift in Sources */,
+				048F42D31E55E026009AC22D /* JsonData.swift in Sources */,
+				048F42D11E55C194009AC22D /* TableSectionHeader.swift in Sources */,
+				048F42C71E558FAD009AC22D /* MyntraVC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		048F42AC1E557E6A009AC22D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				048F42AD1E557E6A009AC22D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		048F42B11E557E6A009AC22D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				048F42B21E557E6A009AC22D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		048F42B51E557E6A009AC22D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		048F42B61E557E6A009AC22D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		048F42B81E557E6A009AC22D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MyntraLookLike/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Appinventiv.MyntraLookLike;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		048F42B91E557E6A009AC22D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MyntraLookLike/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Appinventiv.MyntraLookLike;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		048F42A01E557E69009AC22D /* Build configuration list for PBXProject "MyntraLookLike" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				048F42B51E557E6A009AC22D /* Debug */,
+				048F42B61E557E6A009AC22D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		048F42B71E557E6A009AC22D /* Build configuration list for PBXNativeTarget "MyntraLookLike" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				048F42B81E557E6A009AC22D /* Debug */,
+				048F42B91E557E6A009AC22D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 048F429D1E557E69009AC22D /* Project object */;
+}

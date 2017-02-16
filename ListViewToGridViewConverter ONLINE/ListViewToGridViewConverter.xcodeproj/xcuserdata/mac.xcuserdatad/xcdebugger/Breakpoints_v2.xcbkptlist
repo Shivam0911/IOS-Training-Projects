@@ -10,22 +10,6 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ListViewToGridViewConverter/ProductsGridFlowLayout.swift"
-            timestampString = "508917138.778466"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
-            landmarkName = "init(coder:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ListViewToGridViewConverter/ProductsGridFlowLayout.swift"
             timestampString = "508917149.887686"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
@@ -33,54 +17,6 @@
             endingLineNumber = "23"
             landmarkName = "init(coder:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ListViewToGridViewConverter/ProductsGridFlowLayout.swift"
-            timestampString = "508917172.579672"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "14"
-            endingLineNumber = "14"
-            landmarkName = "init()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ListViewToGridViewConverter.ProductsGridFlowLayout.init () -&gt; ListViewToGridViewConverter.ProductsGridFlowLayout"
-                  moduleName = "ListViewToGridViewConverter"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mac/Desktop/iOS%20Training%20Projects/ListViewToGridViewConverter%20ONLINE/ListViewToGridViewConverter/ProductsGridFlowLayout.swift"
-                  timestampString = "508918158.172262"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "15"
-                  endingLineNumber = "15"
-                  offsetFromSymbolStart = "12">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ListViewToGridViewConverter.ProductsGridFlowLayout.__allocating_init () -&gt; ListViewToGridViewConverter.ProductsGridFlowLayout"
-                  moduleName = "ListViewToGridViewConverter"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mac/Desktop/iOS%20Training%20Projects/ListViewToGridViewConverter%20ONLINE/ListViewToGridViewConverter/ProductsGridFlowLayout.swift"
-                  timestampString = "508918158.173808"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "4">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
