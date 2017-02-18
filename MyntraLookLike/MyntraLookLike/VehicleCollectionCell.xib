@@ -18,22 +18,18 @@
                 <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CgE-C7-Mp0">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="audi" translatesAutoresizingMaskIntoConstraints="NO" id="CgE-C7-Mp0">
                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                         <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </imageView>
-                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vFS-53-rWx">
+                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vFS-53-rWx">
                         <rect key="frame" x="56" y="57" width="20" height="20"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <state key="normal" image="heartIcon2"/>
-                        <state key="selected" image="HeartIcon"/>
-                        <connections>
-                            <action selector="favButtonAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="VqG-2r-Vi1"/>
-                        </connections>
+                        <state key="normal" image="HeartIcon"/>
+                        <state key="selected" image="heartIcon2"/>
                     </button>
                 </subviews>
             </view>
-            <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="vFS-53-rWx" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="57" id="Cfh-oJ-1Cd"/>
                 <constraint firstAttribute="trailing" secondItem="CgE-C7-Mp0" secondAttribute="trailing" id="IVJ-WX-PwR"/>
@@ -46,12 +42,13 @@
             </constraints>
             <connections>
                 <outlet property="VehicleImageOutlet" destination="CgE-C7-Mp0" id="LGn-zI-iT5"/>
-                <outlet property="favButton" destination="vFS-53-rWx" id="MuG-1A-5mS"/>
+                <outlet property="favButton" destination="vFS-53-rWx" id="j9e-pS-PHI"/>
             </connections>
         </collectionViewCell>
     </objects>
     <resources>
         <image name="HeartIcon" width="25" height="25"/>
+        <image name="audi" width="1200" height="800"/>
         <image name="heartIcon2" width="25" height="25"/>
     </resources>
 </document>

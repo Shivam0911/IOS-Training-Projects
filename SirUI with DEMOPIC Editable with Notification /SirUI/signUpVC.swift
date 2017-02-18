@@ -62,7 +62,7 @@ extension signUpVC  {
         var cell : Any = UIView()
         var texfield : Any = textfield
         
-        while !(cell as? UITableViewCell){
+        while !(((cell as? UITableViewCell) != nil)){
             
             texfield = (texfield as AnyObject).superview!!
             cell = texfield
@@ -79,13 +79,7 @@ extension signUpVC  {
     }
     
 }
-extension signUpVC {
-    public func textFieldShouldEndEditing(_ textField: UITextField){
-    
-    }
 
-
-}
 extension signUpVC : UITableViewDataSource, UITableViewDelegate{
             /*
     This func clearBackGround( _ cell1 : UITableViewCell) is used to clear the backgroundColor of contentView,

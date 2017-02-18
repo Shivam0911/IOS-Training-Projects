@@ -20,14 +20,18 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Audi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vWQ-Eb-qMH">
-                        <rect key="frame" x="16" y="8" width="375" height="38"/>
+                        <rect key="frame" x="16" y="8" width="375" height="20.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20.5" id="3Dm-Md-jkr"/>
+                            <constraint firstAttribute="width" constant="375" id="tpU-bz-xn1"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="rKE-sM-9Ds">
                         <rect key="frame" x="0.0" y="46" width="375" height="93"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1uE-Tj-1GL">
                             <size key="itemSize" width="100" height="50"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -35,21 +39,30 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                     </collectionView>
+                    <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="SUu-mj-g7U">
+                        <rect key="frame" x="287" y="8" width="80" height="39"/>
+                        <segments>
+                            <segment title="+"/>
+                            <segment title="-"/>
+                        </segments>
+                        <color key="tintColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </segmentedControl>
                 </subviews>
                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 <constraints>
-                    <constraint firstAttribute="topMargin" secondItem="vWQ-Eb-qMH" secondAttribute="top" id="92e-IP-4FR"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="vWQ-Eb-qMH" secondAttribute="bottom" constant="85" id="B4c-FN-VRz"/>
-                    <constraint firstAttribute="leading" secondItem="rKE-sM-9Ds" secondAttribute="leading" id="FVu-gq-7e2"/>
-                    <constraint firstAttribute="leadingMargin" secondItem="vWQ-Eb-qMH" secondAttribute="leading" constant="-8" id="GUS-Bz-mKk"/>
-                    <constraint firstItem="rKE-sM-9Ds" firstAttribute="top" secondItem="vWQ-Eb-qMH" secondAttribute="bottom" id="Rtw-tJ-mBe"/>
-                    <constraint firstAttribute="trailing" secondItem="rKE-sM-9Ds" secondAttribute="trailing" id="VZ8-yR-3DR"/>
-                    <constraint firstAttribute="bottom" secondItem="rKE-sM-9Ds" secondAttribute="bottom" id="eTf-dE-Wxc"/>
-                    <constraint firstItem="vWQ-Eb-qMH" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" id="lDu-yG-Dgh"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="rKE-sM-9Ds" secondAttribute="trailing" constant="-8" id="2Pa-0p-d57"/>
+                    <constraint firstItem="vWQ-Eb-qMH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="Ltv-P4-Ggd"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="vWQ-Eb-qMH" secondAttribute="trailing" constant="-24" id="Olk-bA-jex"/>
+                    <constraint firstItem="rKE-sM-9Ds" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="38" id="PCb-5j-PNV"/>
+                    <constraint firstItem="rKE-sM-9Ds" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="QqG-36-Tkb"/>
+                    <constraint firstItem="SUu-mj-g7U" firstAttribute="trailing" secondItem="vWQ-Eb-qMH" secondAttribute="trailing" constant="-24" id="Vgb-rQ-EBS"/>
+                    <constraint firstItem="SUu-mj-g7U" firstAttribute="top" secondItem="vWQ-Eb-qMH" secondAttribute="top" id="YHv-3x-Cti"/>
+                    <constraint firstAttribute="topMargin" secondItem="vWQ-Eb-qMH" secondAttribute="top" id="Zj5-3P-bmx"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="rKE-sM-9Ds" secondAttribute="bottom" constant="-8" id="ceP-Aq-wnn"/>
                 </constraints>
             </tableViewCellContentView>
-            <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
             <connections>
+                <outlet property="hideShowSegmentedButton" destination="SUu-mj-g7U" id="wML-35-F8e"/>
                 <outlet property="vehicleBrandLabel" destination="vWQ-Eb-qMH" id="mXG-jR-1bx"/>
                 <outlet property="vehicleGalleryCollection" destination="rKE-sM-9Ds" id="wl2-bx-zem"/>
             </connections>

@@ -14,10 +14,8 @@ class VehicleCollectionCell: UICollectionViewCell {
     @IBOutlet weak var favButton: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
-    favButton.backgroundColor = UIColor.clear    }
-
-    @IBAction func favButtonAction(_ sender: UIButton) {
-    sender.isSelected = !sender.isSelected
-    // self.increaseSize(sender)
+    favButton.backgroundColor = UIColor.clear
+        
     }
-}
+
+   }

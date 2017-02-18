@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040F51EB1E572200008205B6 /* GetSuperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040F51EA1E572200008205B6 /* GetSuperView.swift */; };
 		048F42A91E557E6A009AC22D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048F42A81E557E6A009AC22D /* AppDelegate.swift */; };
 		048F42AE1E557E6A009AC22D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048F42AC1E557E6A009AC22D /* Main.storyboard */; };
 		048F42B01E557E6A009AC22D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 048F42AF1E557E6A009AC22D /* Assets.xcassets */; };
@@ -19,9 +20,11 @@
 		048F42CF1E5591DA009AC22D /* VehicleCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048F42CD1E5591DA009AC22D /* VehicleCollectionCell.xib */; };
 		048F42D11E55C194009AC22D /* TableSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048F42D01E55C194009AC22D /* TableSectionHeader.swift */; };
 		048F42D31E55E026009AC22D /* JsonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048F42D21E55E026009AC22D /* JsonData.swift */; };
+		04DAF15A1E5820A4002DDFD7 /* PreviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DAF1591E5820A4002DDFD7 /* PreviewVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		040F51EA1E572200008205B6 /* GetSuperView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetSuperView.swift; sourceTree = "<group>"; };
 		048F42A51E557E6A009AC22D /* MyntraLookLike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyntraLookLike.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		048F42A81E557E6A009AC22D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		048F42AD1E557E6A009AC22D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -36,6 +39,7 @@
 		048F42CD1E5591DA009AC22D /* VehicleCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VehicleCollectionCell.xib; sourceTree = "<group>"; };
 		048F42D01E55C194009AC22D /* TableSectionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableSectionHeader.swift; sourceTree = "<group>"; };
 		048F42D21E55E026009AC22D /* JsonData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonData.swift; sourceTree = "<group>"; };
+		04DAF1591E5820A4002DDFD7 /* PreviewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,12 +79,14 @@
 				048F42C81E559080009AC22D /* VehicleCell.swift */,
 				048F42C91E559080009AC22D /* VehicleCell.xib */,
 				048F42D01E55C194009AC22D /* TableSectionHeader.swift */,
+				040F51EA1E572200008205B6 /* GetSuperView.swift */,
 				048F42C41E558573009AC22D /* TableSectionHeader.xib */,
 				048F42AC1E557E6A009AC22D /* Main.storyboard */,
 				048F42AF1E557E6A009AC22D /* Assets.xcassets */,
 				048F42B11E557E6A009AC22D /* LaunchScreen.storyboard */,
 				048F42B41E557E6A009AC22D /* Info.plist */,
 				048F42D21E55E026009AC22D /* JsonData.swift */,
+				04DAF1591E5820A4002DDFD7 /* PreviewVC.swift */,
 			);
 			path = MyntraLookLike;
 			sourceTree = "<group>";
@@ -165,6 +171,8 @@
 				048F42A91E557E6A009AC22D /* AppDelegate.swift in Sources */,
 				048F42D31E55E026009AC22D /* JsonData.swift in Sources */,
 				048F42D11E55C194009AC22D /* TableSectionHeader.swift in Sources */,
+				04DAF15A1E5820A4002DDFD7 /* PreviewVC.swift in Sources */,
+				040F51EB1E572200008205B6 /* GetSuperView.swift in Sources */,
 				048F42C71E558FAD009AC22D /* MyntraVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

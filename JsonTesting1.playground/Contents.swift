@@ -161,41 +161,16 @@ class JsonData   {
         }
     }
     
-//    func computeValues(_ object :  [String : Any] ){
-//        for keys in object.keys{
-//            print(keys)
-//            
-//        }
-//        let result = object["Cars"] as! [[String : Any]]
-//       	let res = result[0]
-//        let reso = res["Audi"] as! [[String : Any]]
-//        //let yo =  result[0]
-//        for keys in res.keys{
-//            print(keys)
-//            
-//        }
-//        print("++++++++++++++++++++++++++++++++++++++")
-//        print(reso[1])
-//        print("++++++++++++++++++++++++++++++++++++++")
-//        
-//        // 		print("result = \(result)")
-//        // 		print("-------------------------------------")
-//        // 		for carsResult in result{
-//        //             let audiResult = carsResult["Audi"] as!  [[String : Any]]
-//        //             print("audiResult\(audiResult)")
-//        // 			print("#################################")
-//        // 			print(audiResult[0])
-//        // //            for audiImage in audiResult{
-//        
-//        // // 			   print(audiImage["AudiImage"]!)
-//        
-//        // // 		   }
-//        
-//        //         }
-//        
-//        
-//    }
-//    
-
+    func computeValues(_ object :  [String : Any] ){
+        let result = object["Cars"] as! [[String : Any]]
+        for carsResult in result{
+            let audiResult = carsResult["Audi"] as!  [[String : Any]]
+            
+            
+            
+        }
+        
+        
+    }
+    
 }
-

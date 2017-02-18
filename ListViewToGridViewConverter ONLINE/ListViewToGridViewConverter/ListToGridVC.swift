@@ -46,7 +46,7 @@ class ListToGridVC: UIViewController {
         longPressGesture.minimumPressDuration = 0.3
         deleteButtonOutlet.isHidden = true
         deleteButtonOutlet.layer.cornerRadius = deleteButtonOutlet.layer.bounds.height/2
-         noOfPhotos.text = "\(carData.car.count)  Photos"
+        noOfPhotos.text = "\(carData.car.count)  Photos"
         imageViewCollectionOutlet.allowsSelection = false
     }
     
