@@ -24,7 +24,7 @@ class MyntraVC: UIViewController {
      var vehicleCellIndexpathArray = [IndexPath]()
      var favorites = [[IndexPath]]()
      var sectionIndexPathsArray = [IndexPath]()
-    var expandedSections = [Int]()
+     var expandedSections = [Int]()
     
     //MARK: View Life Cycle
     //=====================
@@ -148,26 +148,25 @@ extension MyntraVC :  UITableViewDelegate,UITableViewDataSource {
             
         }
     }
-    
+    //MARK: sectionTapped Action Method
     func sectionTapped(sender: UIButton) {
         print("section Tapped")
         let section = sender.tag
-       
         if sender.isSelected {
-            
             expandedSections =  self.expandedSections.filter()
-                {
-                    (index) -> Bool in
+                {   (index) -> Bool in
                     
                     return    index != section
+                    
             }
-            
         }
         else {
-           
-              expandedSections.append(section)
+            
+                expandedSections.append(section)
+        
         }
-         sender.isSelected = !sender.isSelected
+        
+        sender.isSelected = !sender.isSelected
         self.vehicleTable.reloadSections([section],with :  .fade)
     }
     
