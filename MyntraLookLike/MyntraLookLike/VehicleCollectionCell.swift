@@ -9,13 +9,12 @@
 import UIKit
 
 class VehicleCollectionCell: UICollectionViewCell {
+   //MARK: Outlets of VehicleCollectionCell
     @IBOutlet weak var VehicleImageOutlet: UIImageView!
-
     @IBOutlet weak var favButton: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
-    favButton.backgroundColor = UIColor.clear
-        
-    }
-
+        favButton.backgroundColor = UIColor.clear
    }
+    
+}

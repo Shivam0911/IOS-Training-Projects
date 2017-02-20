@@ -14,24 +14,9 @@ class PreviewVC : UIViewController{
         viewSubView()
     }
     private func  viewSubView(){
-        self.title = "Preview"
-        self.previewImage.image = self.image
-       // self.previewImage.backgroundColor = UIColor(patternImage: image!)
-     //   let pinchImage = UIPinchGestureRecognizer(target: self, action: #selector(self.selectOnPinch))
-        //pinchImage.delegate = self
-        //previewImage.addGestureRecognizer(pinchImage)
         
-
+        self.title = "Preview"
+        self.previewImage.image = self.image      //Sets the Image of the Background according to the selected cell
     }
 
 }
-//extension PreviewVC : UIGestureRecognizerDelegate{
-//    func selectOnPinch(_ gesture : UIPinchGestureRecognizer){
-//        switch gesture.state{
-//        case .began : print("began")
-//            
-//        
-//        }
-//    
-//    }
-

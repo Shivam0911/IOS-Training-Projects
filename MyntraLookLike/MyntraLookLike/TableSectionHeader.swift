@@ -10,6 +10,6 @@ import UIKit
 
 class TableSectionHeader: UITableViewHeaderFooterView {
     @IBOutlet weak var headerLabel: UILabel!
-    
+    @IBOutlet weak var autoHideSectionButton: UIButton!    
 
 }
