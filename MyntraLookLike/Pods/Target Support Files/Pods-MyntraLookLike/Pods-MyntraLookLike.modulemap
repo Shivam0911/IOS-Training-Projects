@@ -1,0 +1,6 @@
+framework module Pods_MyntraLookLike {
+  umbrella header "Pods-MyntraLookLike-umbrella.h"
+
+  export *
+  module * { export * }
+}
