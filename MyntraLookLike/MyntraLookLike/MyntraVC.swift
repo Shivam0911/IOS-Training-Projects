@@ -8,23 +8,29 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class MyntraVC: UIViewController {
     
     //MARK:Outlets
     //=====================
+   
     @IBOutlet weak var vehicleTable: UITableView!
-  
+   
+
     //MARK:Objects
     //=====================
-     var vehicleCell = VehicleCell()
+    var vehicleCell = VehicleCell()
     
     //MARK:Variables
     //=====================
-     var vehicleCellIndexpathArray = [IndexPath]()
-     var favorites = [[IndexPath]]()
-     var sectionIndexPathsArray = [IndexPath]()
-     var expandedSections = [Int]()
+    var vehicleCategory = ["Cars","Bikes","Trucks"]
+    var vehicleCellIndexpathArray = [IndexPath]()
+    var favorites = [[IndexPath]]()
+    var sectionIndexPathsArray = [IndexPath]()
+    var expandedSections = [Int]()
+    var imagesList = [VehicleModel]()
+    var storeIndices : [ Int : [Int : Int] ]? = nil
     
     //MARK: View Life Cycle
     //=====================
@@ -38,47 +44,61 @@ class MyntraVC: UIViewController {
     //=====================
         let vehicleCellNib = UINib(nibName: "VehicleCell", bundle: nil)
         vehicleTable.register(vehicleCellNib, forCellReuseIdentifier: "vehicleCellID")
-       
+        
     //MARK: Register TableSectionHeader NIB
     //=====================
         let TableHeader = UINib(nibName: "TableSectionHeader", bundle: nil)
         vehicleTable.register(TableHeader, forHeaderFooterViewReuseIdentifier: "TableSectionHeaderID")
+        self.webHitSevice()
     }
-   
+    
+    func    webHitSevice()  {
+        
+        WebServices().fetchDataFromPixabay(withQuery: "audi", success: { (images : [VehicleModel]) in
+            
+            self.imagesList = images
+            self.vehicleTable.reloadData()
+            //self.vehicleCell.vehicleGalleryCollection.reloadData()
+        })  { (error : Error) in  print(error)}
+    
+    
+    }
+    
     override func didReceiveMemoryWarning() {
-       
+        
         super.didReceiveMemoryWarning()
     }
     
 }
 
-    //MARK: TableViewDelegates, TableViewDataSource
-    //=========================
+//MARK: TableViewDelegates, TableViewDataSource
+//=========================
 extension MyntraVC :  UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int    {
         if expandedSections.contains(section)
         {
-        return 0
+            return 0
         }
         else{
-        return 5
+            return 5
         }
     }
-     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-      
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "vehicleCellID", for: indexPath) as? VehicleCell else    {
             fatalError("Cell Not Found !")
             
         }
+        
         
         if(vehicleCellIndexpathArray.contains(indexPath))  {
             
             cell.hideShowButton.isSelected = true
         }
         
-    //MARK: Registered VehicleCollectionCell for table cell
-    //=========================
+        //MARK: Registered VehicleCollectionCell for table cell
+        //=========================
         let vehicleCellNib = UINib(nibName: "VehicleCollectionCell", bundle: nil)
         cell.vehicleGalleryCollection.register(vehicleCellNib, forCellWithReuseIdentifier: "VehicleCollectionCellID")
         cell.vehicleGalleryCollection.delegate = self
@@ -87,27 +107,27 @@ extension MyntraVC :  UITableViewDelegate,UITableViewDataSource {
         return cell
     }
     
-     func numberOfSections(in tableView: UITableView) -> Int{
-    return 3
+    func numberOfSections(in tableView: UITableView) -> Int{
+        return imagesList.count
     }
     
     //MARK: TableSectionHeader datasource viewForHeaderInSection
     //=========================
-     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-     
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
         guard let headerSection = tableView.dequeueReusableHeaderFooterView(withIdentifier: "TableSectionHeaderID") as? TableSectionHeader else {
             
             fatalError("Cell Not Found !")
             
         }
         //Registered autoHideSectionButton for header
-       
+        
         if (expandedSections.contains(section)) {
             headerSection.autoHideSectionButton.isSelected = true
-           
+            
         } else {
             headerSection.autoHideSectionButton.isSelected = false
-         
+            
         }
         headerSection.autoHideSectionButton.tag = section
         headerSection.autoHideSectionButton.addTarget(self, action: #selector(sectionTapped), for: .touchUpInside)
@@ -133,13 +153,13 @@ extension MyntraVC :  UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat  {
         
         return 50
-   
+        
     }
-       public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-       
-       
+    public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        
         if(vehicleCellIndexpathArray.contains(indexPath))  {          //decreases the height of the table cell
-           
+            
             return 40
             
         }else   {
@@ -157,44 +177,59 @@ extension MyntraVC :  UITableViewDelegate,UITableViewDataSource {
                 {   (index) -> Bool in
                     
                     return    index != section
-                    
             }
         }
         else {
             
-                expandedSections.append(section)
-        
+            expandedSections.append(section)
+            
         }
         
         sender.isSelected = !sender.isSelected
         self.vehicleTable.reloadSections([section],with :  .fade)
     }
     
-   
+    
 }
 
-    //MARK: UICollectionView Delegates,DataSources
-    //=========================
+//MARK: UICollectionView Delegates,DataSources
+//=========================
 extension MyntraVC :UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout  {
     
     //Returns no of items in each section
-     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int    {
-       
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int    {
+        
         return 10
     }
     //visits each row and returns respective cells
-     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
-       
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
+        
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "VehicleCollectionCellID", for: indexPath) as? VehicleCollectionCell else  {
             fatalError("Cell Not Found !")
         }
-    //regisers favButton with an action Method
+        //regisers favButton with an action Method
         cell.favButton.addTarget(self, action: #selector(self.favButtonAction(_:)), for: .touchUpInside)
+        cell.index(ofAccessibilityElement: <#T##Any#>)
+        //MARK: Image Load From URL
+        //=====================
+        if imagesList.isEmpty{
         
+            print("indexPath  inside if Row \(indexPath.row)")
+                }else {
+            
+            if let url = URL(string: imagesList[indexPath.row].previewURL) {
+                    print("indexPath Row \(indexPath.row)")
+                
+                    // gets  preview Url and sets the image of each cell
+                    cell.VehicleImageOutlet.af_setImage(withURL : url)
+                }
+        }
+        print("------------------------------------------------")
+        cell.VehicleImageOutlet.contentMode = .scaleAspectFill
         return cell
     }
     //returns CGSize for each item at Indexpath
-     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         return CGSize(width : 80, height : 80)
         
@@ -203,41 +238,42 @@ extension MyntraVC :UICollectionViewDelegate,UICollectionViewDataSource,UICollec
     //MARK: didSelectItemAt this is called every time a cell is selected
     //========================
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)   {
-      
+        
         let cell = collectionView.cellForItem(at: indexPath) as! VehicleCollectionCell
         
-    //MARK: Navigation Insatantiation
-    //========================
+        //MARK: Navigation Insatantiation
+        //========================
         let storyBoardScene = UIStoryboard(name: "Main", bundle: Bundle.main)
         let navi = storyBoardScene.instantiateViewController(withIdentifier : "PreviewVCID") as! PreviewVC
         navi.image = cell.VehicleImageOutlet.image!
         self.navigationController?.pushViewController(navi, animated: true)
-  
+        
     }
-
+    
 }
 extension MyntraVC {
     //MARK: FavoriteButton Action Method
     //=========================
     func favButtonAction(_ sender: UIButton) {
         
-    //MARK: Get CollectionCell From Button
-    //=========================
+        //MARK: Get CollectionCell From Button
+        //=========================
         guard   let collectionCell = sender.getCollectionViewCell() as? VehicleCollectionCell else {fatalError("no collectionViewCell Found")}
         
-    //MARK: Get TableViewCell From CollectionCell
-    //=========================
-       
+        //MARK: Get TableViewCell From CollectionCell
+        //=========================
+        
         guard  let vehicleTableViewCell = collectionCell.getTableViewCell() as? VehicleCell else {fatalError("no vehicleTableViewCell Found")}
         let vehicleTableIndexPath = vehicleTable.indexPath(for : (vehicleTableViewCell))
         let vehicleCollectionIndexPath = vehicleTableViewCell.vehicleGalleryCollection.indexPath(for : (collectionCell))
         
-//        print("tableIndexPath =\(tableIndexPath!)")
-//        print("tableIndexPath row =\(tableIndexPath!.item)")
-//        print("tableIndexPath section =\(tableIndexPath!.section)")
-//        print("collectionIndexPath = \(collectionIndexPath!)")
-//        print("collectionIndexPath col = \(collectionIndexPath!.item)")
-        
+        storeIndices = [vehicleTableIndexPath!.section : [vehicleTableIndexPath!.item : vehicleCollectionIndexPath!.item ]]
+        //        print("tableIndexPath =\(tableIndexPath!)")
+        //        print("tableIndexPath row =\(tableIndexPath!.item)")
+        //        print("tableIndexPath section =\(tableIndexPath!.section)")
+        //        print("collectionIndexPath = \(collectionIndexPath!)")
+        //        print("collectionIndexPath col = \(collectionIndexPath!.item)")
+     //   print(storeIndices!)
         if sender.isSelected{
             sender.isSelected = false
             self.favorites.remove(at: favorites.index(where: {  $0 == [vehicleTableIndexPath!,vehicleCollectionIndexPath!] })!)
@@ -246,17 +282,17 @@ extension MyntraVC {
             sender.isSelected = true
             self.favorites.append([vehicleTableIndexPath!,vehicleCollectionIndexPath!])
         }
-       
+        
     }
     //MARK: ButtonAction for hideShowButton
     //=========================
     func hideShowButtonTapped(_ sender : UIButton)   {
-       
+        
         guard  let tableViewCell = sender.getTableViewCell() as? VehicleCell else {fatalError("no tableViewCell Found")}
         let tableIndexPath = vehicleTable.indexPath(for : (tableViewCell))
         sender.isSelected = !sender.isSelected
         if sender.isSelected {
-           
+            
             self.vehicleCellIndexpathArray.append(tableIndexPath!)
             //reloads the rows at specific table indexPaths
             self.vehicleTable.reloadRows(at: [tableIndexPath!], with: .fade)
@@ -264,8 +300,8 @@ extension MyntraVC {
         }
         else {
             vehicleCellIndexpathArray =  self.vehicleCellIndexpathArray.filter()    {
-            (indices) in
-            return    indices != tableIndexPath!
+                (indices) in
+                return    indices != tableIndexPath!
             }
             //reloads the rows at specific table indexPaths
             self.vehicleTable.reloadRows(at: [tableIndexPath!], with: .fade)
@@ -277,4 +313,4 @@ extension MyntraVC {
 }
 
 
- 
+

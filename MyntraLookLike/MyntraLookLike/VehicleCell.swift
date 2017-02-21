@@ -21,5 +21,7 @@ class VehicleCell: UITableViewCell {
     }
     override func prepareForReuse() {
         hideShowButton.isSelected = false
+        vehicleBrandLabel.text = ""
+    //    vehicleGalleryCollection = nil
     }
    }

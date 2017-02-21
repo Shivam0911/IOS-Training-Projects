@@ -19,8 +19,11 @@
 		048F42CE1E5591DA009AC22D /* VehicleCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048F42CC1E5591DA009AC22D /* VehicleCollectionCell.swift */; };
 		048F42CF1E5591DA009AC22D /* VehicleCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048F42CD1E5591DA009AC22D /* VehicleCollectionCell.xib */; };
 		048F42D11E55C194009AC22D /* TableSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048F42D01E55C194009AC22D /* TableSectionHeader.swift */; };
-		048F42D31E55E026009AC22D /* JsonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048F42D21E55E026009AC22D /* JsonData.swift */; };
+		04D4F5EA1E5C633500F2CE93 /* VehicleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D4F5E91E5C633500F2CE93 /* VehicleModel.swift */; };
+		04D4F5ED1E5C642C00F2CE93 /* NetWorkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D4F5EB1E5C642C00F2CE93 /* NetWorkController.swift */; };
+		04D4F5EE1E5C642C00F2CE93 /* WebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D4F5EC1E5C642C00F2CE93 /* WebServices.swift */; };
 		04DAF15A1E5820A4002DDFD7 /* PreviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DAF1591E5820A4002DDFD7 /* PreviewVC.swift */; };
+		21A0F365C6060039EAF07CE2 /* Pods_MyntraLookLike.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6743A0FC850E171ADE9D851 /* Pods_MyntraLookLike.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,8 +41,13 @@
 		048F42CC1E5591DA009AC22D /* VehicleCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleCollectionCell.swift; sourceTree = "<group>"; };
 		048F42CD1E5591DA009AC22D /* VehicleCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VehicleCollectionCell.xib; sourceTree = "<group>"; };
 		048F42D01E55C194009AC22D /* TableSectionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableSectionHeader.swift; sourceTree = "<group>"; };
-		048F42D21E55E026009AC22D /* JsonData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonData.swift; sourceTree = "<group>"; };
+		04D4F5E91E5C633500F2CE93 /* VehicleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleModel.swift; sourceTree = "<group>"; };
+		04D4F5EB1E5C642C00F2CE93 /* NetWorkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetWorkController.swift; sourceTree = "<group>"; };
+		04D4F5EC1E5C642C00F2CE93 /* WebServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServices.swift; sourceTree = "<group>"; };
 		04DAF1591E5820A4002DDFD7 /* PreviewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewVC.swift; sourceTree = "<group>"; };
+		65ECA18EB88E8070B371FDA7 /* Pods-MyntraLookLike.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyntraLookLike.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyntraLookLike/Pods-MyntraLookLike.debug.xcconfig"; sourceTree = "<group>"; };
+		B6743A0FC850E171ADE9D851 /* Pods_MyntraLookLike.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyntraLookLike.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D08E7CC96F55D01F0CFD6D7A /* Pods-MyntraLookLike.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyntraLookLike.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyntraLookLike/Pods-MyntraLookLike.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21A0F365C6060039EAF07CE2 /* Pods_MyntraLookLike.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +67,8 @@
 			children = (
 				048F42A71E557E6A009AC22D /* MyntraLookLike */,
 				048F42A61E557E6A009AC22D /* Products */,
+				A03E9A20C859F922CDA7C21E /* Pods */,
+				15CE9FC484F3B05F0CA3EC00 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,6 +85,7 @@
 			children = (
 				048F42A81E557E6A009AC22D /* AppDelegate.swift */,
 				048F42C61E558FAD009AC22D /* MyntraVC.swift */,
+				04D4F5E91E5C633500F2CE93 /* VehicleModel.swift */,
 				048F42CC1E5591DA009AC22D /* VehicleCollectionCell.swift */,
 				048F42CD1E5591DA009AC22D /* VehicleCollectionCell.xib */,
 				048F42C81E559080009AC22D /* VehicleCell.swift */,
@@ -85,10 +97,28 @@
 				048F42AF1E557E6A009AC22D /* Assets.xcassets */,
 				048F42B11E557E6A009AC22D /* LaunchScreen.storyboard */,
 				048F42B41E557E6A009AC22D /* Info.plist */,
-				048F42D21E55E026009AC22D /* JsonData.swift */,
+				04D4F5EB1E5C642C00F2CE93 /* NetWorkController.swift */,
+				04D4F5EC1E5C642C00F2CE93 /* WebServices.swift */,
 				04DAF1591E5820A4002DDFD7 /* PreviewVC.swift */,
 			);
 			path = MyntraLookLike;
+			sourceTree = "<group>";
+		};
+		15CE9FC484F3B05F0CA3EC00 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B6743A0FC850E171ADE9D851 /* Pods_MyntraLookLike.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A03E9A20C859F922CDA7C21E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				65ECA18EB88E8070B371FDA7 /* Pods-MyntraLookLike.debug.xcconfig */,
+				D08E7CC96F55D01F0CFD6D7A /* Pods-MyntraLookLike.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -98,9 +128,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 048F42B71E557E6A009AC22D /* Build configuration list for PBXNativeTarget "MyntraLookLike" */;
 			buildPhases = (
+				F1BB89B305109176AB41ECB2 /* [CP] Check Pods Manifest.lock */,
 				048F42A11E557E6A009AC22D /* Sources */,
 				048F42A21E557E6A009AC22D /* Frameworks */,
 				048F42A31E557E6A009AC22D /* Resources */,
+				ECB3784A34A1C6D7BFECF5FD /* [CP] Embed Pods Frameworks */,
+				6BF57FD6A3F3B5FF46459E37 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -161,6 +194,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6BF57FD6A3F3B5FF46459E37 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyntraLookLike/Pods-MyntraLookLike-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ECB3784A34A1C6D7BFECF5FD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyntraLookLike/Pods-MyntraLookLike-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F1BB89B305109176AB41ECB2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		048F42A11E557E6A009AC22D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -169,10 +250,12 @@
 				048F42CA1E559080009AC22D /* VehicleCell.swift in Sources */,
 				048F42CE1E5591DA009AC22D /* VehicleCollectionCell.swift in Sources */,
 				048F42A91E557E6A009AC22D /* AppDelegate.swift in Sources */,
-				048F42D31E55E026009AC22D /* JsonData.swift in Sources */,
+				04D4F5EE1E5C642C00F2CE93 /* WebServices.swift in Sources */,
+				04D4F5ED1E5C642C00F2CE93 /* NetWorkController.swift in Sources */,
 				048F42D11E55C194009AC22D /* TableSectionHeader.swift in Sources */,
 				04DAF15A1E5820A4002DDFD7 /* PreviewVC.swift in Sources */,
 				040F51EB1E572200008205B6 /* GetSuperView.swift in Sources */,
+				04D4F5EA1E5C633500F2CE93 /* VehicleModel.swift in Sources */,
 				048F42C71E558FAD009AC22D /* MyntraVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,6 +377,7 @@
 		};
 		048F42B81E557E6A009AC22D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65ECA18EB88E8070B371FDA7 /* Pods-MyntraLookLike.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MyntraLookLike/Info.plist;
@@ -306,6 +390,7 @@
 		};
 		048F42B91E557E6A009AC22D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D08E7CC96F55D01F0CFD6D7A /* Pods-MyntraLookLike.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MyntraLookLike/Info.plist;
