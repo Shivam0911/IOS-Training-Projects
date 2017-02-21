@@ -8,23 +8,33 @@
 
 /* Begin PBXBuildFile section */
 		04334B541E5B3A7300A174D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04334B531E5B3A7300A174D1 /* AppDelegate.swift */; };
-		04334B561E5B3A7300A174D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04334B551E5B3A7300A174D1 /* ViewController.swift */; };
-		04334B591E5B3A7300A174D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04334B571E5B3A7300A174D1 /* Main.storyboard */; };
 		04334B5B1E5B3A7300A174D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04334B5A1E5B3A7300A174D1 /* Assets.xcassets */; };
 		04334B5E1E5B3A7300A174D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04334B5C1E5B3A7300A174D1 /* LaunchScreen.storyboard */; };
-		04334B661E5B529600A174D1 /* CarsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04334B651E5B529600A174D1 /* CarsModel.swift */; };
+		04334B661E5B529600A174D1 /* ImagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04334B651E5B529600A174D1 /* ImagesModel.swift */; };
+		04B88AD21E5C1EE60005D49D /* WebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B88AD11E5C1EE60005D49D /* WebServices.swift */; };
+		04B88AD41E5C1F3C0005D49D /* NetWorkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B88AD31E5C1F3C0005D49D /* NetWorkController.swift */; };
+		04B88AD81E5C210E0005D49D /* ImagesSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B88AD71E5C210E0005D49D /* ImagesSearchVC.swift */; };
+		04B88ADA1E5C21660005D49D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04B88AD91E5C21660005D49D /* Main.storyboard */; };
+		04B88AE11E5C263F0005D49D /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B88ADF1E5C263F0005D49D /* ImageCollectionViewCell.swift */; };
+		04B88AE21E5C263F0005D49D /* ImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B88AE01E5C263F0005D49D /* ImageCollectionViewCell.xib */; };
+		04D4F5E81E5C4BDB00F2CE93 /* PreviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D4F5E71E5C4BDB00F2CE93 /* PreviewVC.swift */; };
 		5194FF0B0B7D748FFBE6BBBF /* Pods_WebServiceHitDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E67FF0C57E764C7247A4E736 /* Pods_WebServiceHitDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		04334B501E5B3A7300A174D1 /* WebServiceHitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebServiceHitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04334B531E5B3A7300A174D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		04334B551E5B3A7300A174D1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		04334B581E5B3A7300A174D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04334B5A1E5B3A7300A174D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04334B5D1E5B3A7300A174D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04334B5F1E5B3A7300A174D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04334B651E5B529600A174D1 /* CarsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarsModel.swift; sourceTree = "<group>"; };
+		04334B651E5B529600A174D1 /* ImagesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesModel.swift; sourceTree = "<group>"; };
+		04B88AD11E5C1EE60005D49D /* WebServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServices.swift; sourceTree = "<group>"; };
+		04B88AD31E5C1F3C0005D49D /* NetWorkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetWorkController.swift; sourceTree = "<group>"; };
+		04B88AD71E5C210E0005D49D /* ImagesSearchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesSearchVC.swift; sourceTree = "<group>"; };
+		04B88AD91E5C21660005D49D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		04B88ADF1E5C263F0005D49D /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		04B88AE01E5C263F0005D49D /* ImageCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		04D4F5E71E5C4BDB00F2CE93 /* PreviewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewVC.swift; sourceTree = "<group>"; };
 		6351F48DD6F4D2087ECB6EAF /* Pods-WebServiceHitDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebServiceHitDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-WebServiceHitDemo/Pods-WebServiceHitDemo.release.xcconfig"; sourceTree = "<group>"; };
 		68423D9AF698824A9379700A /* Pods-WebServiceHitDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebServiceHitDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WebServiceHitDemo/Pods-WebServiceHitDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		E67FF0C57E764C7247A4E736 /* Pods_WebServiceHitDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WebServiceHitDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,12 +74,17 @@
 			isa = PBXGroup;
 			children = (
 				04334B531E5B3A7300A174D1 /* AppDelegate.swift */,
-				04334B551E5B3A7300A174D1 /* ViewController.swift */,
-				04334B651E5B529600A174D1 /* CarsModel.swift */,
-				04334B571E5B3A7300A174D1 /* Main.storyboard */,
+				04334B651E5B529600A174D1 /* ImagesModel.swift */,
+				04B88AD71E5C210E0005D49D /* ImagesSearchVC.swift */,
+				04B88AD31E5C1F3C0005D49D /* NetWorkController.swift */,
+				04B88AD11E5C1EE60005D49D /* WebServices.swift */,
 				04334B5A1E5B3A7300A174D1 /* Assets.xcassets */,
 				04334B5C1E5B3A7300A174D1 /* LaunchScreen.storyboard */,
+				04D4F5E71E5C4BDB00F2CE93 /* PreviewVC.swift */,
 				04334B5F1E5B3A7300A174D1 /* Info.plist */,
+				04B88AD91E5C21660005D49D /* Main.storyboard */,
+				04B88ADF1E5C263F0005D49D /* ImageCollectionViewCell.swift */,
+				04B88AE01E5C263F0005D49D /* ImageCollectionViewCell.xib */,
 			);
 			path = WebServiceHitDemo;
 			sourceTree = "<group>";
@@ -155,7 +170,8 @@
 			files = (
 				04334B5E1E5B3A7300A174D1 /* LaunchScreen.storyboard in Resources */,
 				04334B5B1E5B3A7300A174D1 /* Assets.xcassets in Resources */,
-				04334B591E5B3A7300A174D1 /* Main.storyboard in Resources */,
+				04B88AE21E5C263F0005D49D /* ImageCollectionViewCell.xib in Resources */,
+				04B88ADA1E5C21660005D49D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,23 +230,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04334B661E5B529600A174D1 /* CarsModel.swift in Sources */,
-				04334B561E5B3A7300A174D1 /* ViewController.swift in Sources */,
+				04B88AE11E5C263F0005D49D /* ImageCollectionViewCell.swift in Sources */,
+				04D4F5E81E5C4BDB00F2CE93 /* PreviewVC.swift in Sources */,
+				04334B661E5B529600A174D1 /* ImagesModel.swift in Sources */,
+				04B88AD21E5C1EE60005D49D /* WebServices.swift in Sources */,
 				04334B541E5B3A7300A174D1 /* AppDelegate.swift in Sources */,
+				04B88AD41E5C1F3C0005D49D /* NetWorkController.swift in Sources */,
+				04B88AD81E5C210E0005D49D /* ImagesSearchVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		04334B571E5B3A7300A174D1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				04334B581E5B3A7300A174D1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		04334B5C1E5B3A7300A174D1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

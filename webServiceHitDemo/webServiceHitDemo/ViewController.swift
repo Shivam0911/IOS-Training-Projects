@@ -24,6 +24,7 @@ class ViewController: UIViewController {
         carsTable.delegate = self
         carsTable.dataSource = self
          self.fetchData(withQuery: "Cars")
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -47,14 +48,14 @@ class ViewController: UIViewController {
                           headers: nil).responseJSON { (response :DataResponse<Any>) in
                             
                             if let value = response.result.value as? [String:Any] {
-                                
-                                let json = JSON(value)
+                                 let json = JSON(value)
                                 //print(json)
                                self.carsPicturesData = json["hits"].array!
-                                print("--------------------------------------------")
+                                //print("--------------------------------------------")
                                // print(self.carsPicturesData)
                                 
-                                self.tempData.setValues([self.carsPicturesData])
+                                self.tempData.setValues(json)
+                                self.carsTable.reloadData()
                                 
                             } else if let error = response.result.error {
                              
@@ -72,7 +73,7 @@ class ViewController: UIViewController {
 extension ViewController   : UITableViewDelegate, UITableViewDataSource {
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
     
-    return 10
+    return carsPicturesData.count
     
     }
     
@@ -80,7 +81,7 @@ extension ViewController   : UITableViewDelegate, UITableViewDataSource {
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
     
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "CarsTableID", for: indexPath) as? CarsTableCell  else{fatalError("nil") }
-        let ur = NSURL(fileURLWithPath: self.tempData.getValue() ) as URL
+        let ur = NSURL(string: self.tempData.getValue() ) as! URL
         cell.carsImageView.af_setImage(withURL: ur)
 
         return cell

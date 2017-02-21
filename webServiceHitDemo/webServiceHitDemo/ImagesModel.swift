@@ -11,28 +11,52 @@ import SwiftyJSON
 import Alamofire
 import AlamofireImage
 
-class CarModel {
-    
+struct ImagesModel {
+    let id : String!
+    var comments = 0
+    var downloads = 0
+    var favorites = 0
+    var likes = 0
+    var views = 0
+    var pageURL : String = ""
+    var userImageURL : String = ""
     var previewWidth: Int = 0
     var imageWidth: Int = 0
     var webformatURL: String = ""
     var previewURL: String = ""
-    var carsPicturesData = [JSON]()
     var imageData : JSON?  = []
-    func  setValues(_ response : JSON){
-      
-      
-        carsPicturesData = response["hits"].arrayValue
-        print(carsPicturesData[0]["previewURL"])
-         imageData = carsPicturesData[0]["previewURL"]
+   
+    init(withJSON json: JSON) {
+        
+        self.id = json["id"].stringValue
+        self.comments = json["comments"].intValue
+        self.downloads = json["downloads"].intValue
+        self.favorites = json["favorites"].intValue
+        self.likes = json["likes"].intValue
+        self.views = json["views"].intValue
+        self.pageURL = json["pageURL"].stringValue
+        self.userImageURL = json["userImageURL"].stringValue
+        self.webformatURL = json["webformatURL"].stringValue
+        self.previewURL = json["previewURL"].stringValue
         
     }
-    func getValue()-> String{
-    print("----------------")
-    print((imageData?.stringValue)!)
-    return (imageData?.stringValue)!
+
     
-}
+    
+//
+//    func  setValues(_ response : JSON){
+//      
+//        carsPicturesData = response["hits"].arrayValue
+//        print(carsPicturesData[0]["previewURL"])
+//         imageData = carsPicturesData[0]["previewURL"]
+//        
+//    }
+//    func getValue()-> String{
+//    print("----------------")
+//    print((imageData?.stringValue)!)
+//    return (imageData?.stringValue)!
+//    
+//}
     
     
     
