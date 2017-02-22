@@ -12,16 +12,34 @@ class VehicleCell: UITableViewCell {
  
    
     @IBOutlet weak var hideShowButton: UIButton!
+    
     @IBOutlet weak var vehicleBrandLabel: UILabel!
+    
     @IBOutlet weak var vehicleGalleryCollection: UICollectionView!
+    
+    var vehicleIndex = IndexPath()
+    
     override func awakeFromNib() {
+        
         super.awakeFromNib()
-        // Initialization code
-                print(#function)
-    }
+        
+        }
     override func prepareForReuse() {
+        
         hideShowButton.isSelected = false
+        
         vehicleBrandLabel.text = ""
-    //    vehicleGalleryCollection = nil
-    }
-   }
+   
+        }
+}
+
+extension VehicleCell {
+    func setCollectionViewDataSourceDelegate<D: UICollectionViewDataSource & UICollectionViewDelegate>(_ dataSourceDelegate: D, _ indexPath : IndexPath) {
+    
+            vehicleGalleryCollection.delegate = dataSourceDelegate
+        
+            vehicleGalleryCollection.dataSource = dataSourceDelegate
+                
+            vehicleGalleryCollection.reloadData()
+        }        
+}

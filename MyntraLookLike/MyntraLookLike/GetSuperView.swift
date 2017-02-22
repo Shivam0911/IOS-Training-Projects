@@ -8,28 +8,39 @@
 import UIKit
 
 extension UIView{
-
+    
+    //gets the UiView reference for CollectionViewCell
     func getCollectionViewCell( ) ->UIView? {
 
         var subView = self
+        
         while !(subView is UICollectionViewCell) {
         
             guard let   cell  =  subView.superview else{ return nil }
+            
             subView = cell
+            
         }
+        
         return subView
-}
+    }
+    
+    //gets the UiView reference forTableViewCell
     func getTableViewCell( ) ->UIView? {
         
         var subView = self
+        
         while !(subView is UITableViewCell) {
             
             guard let   cell  =  subView.superview else{ return nil }
+            
             subView = cell
       
         }
+        
         return subView
-}
+        
+    }
 
 }
 

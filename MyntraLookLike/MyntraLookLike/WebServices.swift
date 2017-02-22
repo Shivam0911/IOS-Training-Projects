@@ -24,9 +24,7 @@ class WebServices {
         
         NetWorkController().GET(URL: URL,
                                 parameters : parameters,
-                                success : { (json : JSON) in
-                                    
-                                    //print(json)
+                                success : { (json : JSON) in                                   
                                     
                                     let imagesArray = json["hits"].arrayValue
                                     
