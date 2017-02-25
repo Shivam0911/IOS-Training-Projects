@@ -20,9 +20,7 @@ class SignUpVC: UIViewController  {
   //=============
   
   let fields = ["Name","Age","Email","Gender"]
-  
-  var counter  = 0
-  
+    
   let dbHelper = DBhelper()
   
   override func viewDidLoad() {
@@ -47,9 +45,10 @@ class SignUpVC: UIViewController  {
     
     self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: .plain, target: self, action:
       
-      #selector(doneButtonTapped(_:) ))
-    
+    #selector(doneButtonTapped(_:) ))
+
   }
+  
   override func didReceiveMemoryWarning() {
     
     super.didReceiveMemoryWarning()
@@ -92,23 +91,26 @@ extension SignUpVC : UITableViewDataSource,UITableViewDelegate,UITextFieldDelega
   //====================
   func textFieldDidEndEditing(_ textField: UITextField){
     
+		let cell =  textField.superview?.superview as? ContentViewCell
+    
+    guard let index = signUpTableView.indexPath(for: (cell)!) else {   return   }
+
+    
     guard let  cellData = textField.text else {   return   }
     
-    switch counter  {
+    switch index.row  {
       
-    case 0 : dbHelper.name = cellData
-      
-    case 1 :  dbHelper.age = (Int(cellData)) ?? 0
-      
-    case 2 : dbHelper.email = cellData
-      
-    case 3 : dbHelper.gender = cellData
-      
-    default : print("Wrong Type Value")
-      
+				case 0 : dbHelper.name = cellData
+			
+				case 1 :  dbHelper.age = (Int(cellData)) ?? 0
+			
+				case 2 : dbHelper.email = cellData
+			
+				case 3 : dbHelper.gender = cellData
+				
+				default : print("Wrong Type Value")
+			
     }
-    
-    counter = counter + 1
     
   }
   
@@ -125,7 +127,9 @@ extension SignUpVC {
   func doneButtonTapped(_ sender : UIBarButtonItem) {
     
     print("done tapped")
-    
+		
+    signUpTableView.endEditing(true)
+		
     dbHelper.saveData()
     
     signUpTableView.reloadData()

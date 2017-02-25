@@ -115,15 +115,22 @@ class DBhelper   {
     let managedContext = appDelegate.persistentContainer.viewContext
     
     managedContext.delete(deleteSpecificData)
-    
    
     do {
+			
       try managedContext.save()
-    } catch _ {
+			
     }
-    
+		catch _ {
+			
+    }
   
   }
+	
+	func editAtPerson(_ atPerson : Person )		{
+	
+	
+	}
   
   
 }
