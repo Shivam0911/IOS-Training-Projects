@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ContentCellID" id="KGk-i7-Jjw" customClass="ContentViewCell" customModule="HitList" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="342" height="79.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="375" translatesAutoresizingMaskIntoConstraints="NO" id="WYg-54-mrv">
+                        <rect key="frame" x="0.0" y="8" width="342" height="36"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder=" likh Bhai !" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UZs-N7-8dC">
+                        <rect key="frame" x="0.0" y="38" width="342" height="33"/>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="UZs-N7-8dC" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="1:2" constant="-7" id="3IZ-nU-ugk"/>
+                    <constraint firstItem="UZs-N7-8dC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="8b2-rs-9cu"/>
+                    <constraint firstAttribute="trailing" secondItem="UZs-N7-8dC" secondAttribute="trailing" id="Wkd-qm-as4"/>
+                    <constraint firstAttribute="trailing" secondItem="WYg-54-mrv" secondAttribute="trailing" id="mf0-BK-BPh"/>
+                    <constraint firstItem="WYg-54-mrv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="rbx-O4-FdE"/>
+                    <constraint firstAttribute="topMargin" secondItem="WYg-54-mrv" secondAttribute="top" id="sNZ-Wk-Sae"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="UZs-N7-8dC" secondAttribute="bottom" constant="1" id="tHg-4f-67N"/>
+                    <constraint firstItem="WYg-54-mrv" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="1:2" constant="-4" id="yjq-8U-Otz"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="inputTextField" destination="UZs-N7-8dC" id="1cH-ZM-0Df"/>
+                <outlet property="inputTypeLabel" destination="WYg-54-mrv" id="PxV-pq-EmQ"/>
+            </connections>
+            <point key="canvasLocation" x="-105.5" y="13"/>
+        </tableViewCell>
+    </objects>
+</document>
