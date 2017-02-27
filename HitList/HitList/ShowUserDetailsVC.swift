@@ -99,7 +99,7 @@ extension ShowUserDetailsVC : UITableViewDelegate, UITableViewDataSource ,UIText
 			
 										case 0 : cell.inputTextField.text = people.name
 			
-										case 1 :	cell.inputTextField.text  = "\(people.age)"
+										case 1 : cell.inputTextField.text  = "\(people.age)"
 			
 										case 2 : cell.inputTextField.text = people.email
 			
