@@ -11,7 +11,9 @@ import CoreData
 import UIKit
 
 class DBhelper   {
-  
+	
+	//MARK: Variables 
+	//============
   var people = [Person]()
   
   var name : String
@@ -21,116 +23,171 @@ class DBhelper   {
   var email : String
   
   var gender : String
-  
+	
+	//MARK: Initializers
+	//=============
   init() {
     
-     name = ""
+				name = ""
     
-     age = 0
+				age = 0
     
-     email = ""
+				email = ""
     
-     gender = ""
+				gender = ""
 
   }
   
   init(withName name : String , withAge age : Int , withEmail email : String , withGender gender : String) {
     
-    self.name = name
+				self.name = name
     
-    self.age = age
+				self.age = age
     
-    self.email = email
+				self.email = email
     
-    self.gender = gender
+				self.gender = gender
   }
-  
+
+}
+
+extension DBhelper {
+	
+	//MARK: SaveData Method
+	//==================
   func saveData() {
     
-    guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-      return
+				guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+					
+					return
+					
     }
     
-    let managedContext = appDelegate.persistentContainer.viewContext
+				let managedContext = appDelegate.persistentContainer.viewContext
     
-    let entity = NSEntityDescription.entity(forEntityName: "Person" , in: managedContext)!
+				let entity = NSEntityDescription.entity(forEntityName: "Person" , in: managedContext)!
     
-    let person = Person(entity: entity , insertInto: managedContext)
+				let person = Person(entity: entity , insertInto: managedContext)
     
-    person.name = name
+				person.name = name
     
-    person.age =  Int16(age)
+				person.age =  Int16(age)
     
-    person.email = email
+				person.email = email
     
-    person.gender = gender
+				person.gender = gender
     
-    do {
+				do {
       
-      try managedContext.save()
+					try managedContext.save()
       
-      people.append(person)
+					people.append(person)
+					
+				} catch let error as NSError {
       
-    } catch let error as NSError {
+					print("Could not save. \(error), \(error.userInfo)")
       
-      print("Could not save. \(error), \(error.userInfo)")
-      
-    }
+				}
     
   }
 
+	//MARK: getData Method
+	//==================
   func getData(){
   
-  guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+			guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
   
-    fatalError("no Delegate !")
+				fatalError("no Delegate !")
     
-  }
+			}
   
-  let managedContext = appDelegate.persistentContainer.viewContext
+			let managedContext = appDelegate.persistentContainer.viewContext
   
-  let fetchRequest : NSFetchRequest<Person> = Person.fetchRequest()
+			let fetchRequest : NSFetchRequest<Person> = Person.fetchRequest()
   
-  do {
+			do {
   
-  people = try managedContext.fetch(fetchRequest)
+					people = try managedContext.fetch(fetchRequest)
   
-  }
-  catch let error as NSError {
+				}
+				catch let error as NSError {
   
-  print("Could not fetch. \(error), \(error.userInfo)")
+						print("Could not fetch. \(error), \(error.userInfo)")
     
-    }
+				}
   
   }
-  
+	
+	//MARK: deleteData Method
+	//===================
   func deleteData(_ deleteSpecificData : Person) {
   
-    guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+				guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
       
-      fatalError("no Delegate !")
+					fatalError("no Delegate !")
       
-    }
+				}
     
-    let managedContext = appDelegate.persistentContainer.viewContext
+				let managedContext = appDelegate.persistentContainer.viewContext
     
-    managedContext.delete(deleteSpecificData)
-   
-    do {
+				managedContext.delete(deleteSpecificData)
+		
+				do {
 			
-      try managedContext.save()
-			
-    }
-		catch _ {
-			
-    }
+					try managedContext.save()
+					
+				}
+					catch _ {
+			                    
+				}
   
   }
 	
-	func editAtPerson(_ atPerson : Person )		{
+	//MARK: editAtPerson Method
+	//=====================
+	func editAtPerson(_ atPerson : Person , _ personIndex : Int)		{
 	
-	
+				guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+			
+						fatalError("no Delegate !")
+			
+				}
+  
+				let managedContext = appDelegate.persistentContainer.viewContext
+  
+				let fetchRequest : NSFetchRequest<Person> = Person.fetchRequest()
+  
+				do {
+  
+						people = try managedContext.fetch(fetchRequest)
+  
+					}
+					catch let error as NSError {
+  
+							print("Could not fetch. \(error), \(error.userInfo)")
+		
+					}
+		
+				people[personIndex].name = atPerson.name
+		
+				people[personIndex].email = atPerson.email
+		
+				people[personIndex].age =	atPerson.age
+		
+				people[personIndex].gender = atPerson.gender
+		
+				do{
+			
+						try managedContext.save()
+			
+						print("saved")
+			
+					}catch let error as NSError {
+			
+							print("Could not save \(error)")
+			
+				}
+		
 	}
-  
-  
+	
 }

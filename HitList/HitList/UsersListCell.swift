@@ -13,7 +13,9 @@ class UsersListCell: UITableViewCell {
 	@IBOutlet weak var userNameLabel: UILabel!
 	
 	override func awakeFromNib() {
+		
         super.awakeFromNib()
+		
         // Initialization code
     }
 
@@ -21,6 +23,7 @@ class UsersListCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+			
     }
     
 }
