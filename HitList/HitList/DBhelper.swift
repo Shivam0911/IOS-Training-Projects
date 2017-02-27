@@ -153,21 +153,8 @@ extension DBhelper {
 			
 				}
   
-				let managedContext = appDelegate.persistentContainer.viewContext
-  
-				let fetchRequest : NSFetchRequest<Person> = Person.fetchRequest()
-  
-				do {
-  
-						people = try managedContext.fetch(fetchRequest)
-  
-					}
-					catch let error as NSError {
-  
-							print("Could not fetch. \(error), \(error.userInfo)")
-		
-					}
-		
+				let managedContext = appDelegate.persistentContainer.viewContext  
+					
 				people[personIndex].name = atPerson.name
 		
 				people[personIndex].email = atPerson.email
