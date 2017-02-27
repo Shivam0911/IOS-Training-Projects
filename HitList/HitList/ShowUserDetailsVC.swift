@@ -75,7 +75,7 @@ class ShowUserDetailsVC: UIViewController {
 extension ShowUserDetailsVC : UITableViewDelegate, UITableViewDataSource ,UITextFieldDelegate {
 
 	
-	func tableView(_ tableView: UITableView,numberOfRowsInSection section: Int) -> Int {
+  func tableView(_ tableView: UITableView,numberOfRowsInSection section: Int) -> Int {
     
 					return fields.count
 		
@@ -127,7 +127,7 @@ extension ShowUserDetailsVC : UITableViewDelegate, UITableViewDataSource ,UIText
 	
 	//MARK: textField Delegates
 	//====================
-	func textFieldDidEndEditing(_ textField: UITextField){
+  func textFieldDidEndEditing(_ textField: UITextField){
 		
 				let cell =  textField.superview?.superview as? ContentViewCell
 		
@@ -153,7 +153,7 @@ extension ShowUserDetailsVC : UITableViewDelegate, UITableViewDataSource ,UIText
 	
 	//MARK: doneButtonTapped
 	//===================
-	func doneButtonTapped(_ sender : UIBarButtonItem) {
+  func doneButtonTapped(_ sender : UIBarButtonItem) {
 		
 				print("done tapped")
 		
