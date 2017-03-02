@@ -1,0 +1,332 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04BF79751E67ED5300E3177B /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF79741E67ED5300E3177B /* SignUpVC.swift */; };
+		04F5BAF21E670C3900EFAE18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F5BAF11E670C3900EFAE18 /* AppDelegate.swift */; };
+		04F5BAF71E670C3900EFAE18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F5BAF51E670C3900EFAE18 /* Main.storyboard */; };
+		04F5BAFA1E670C3A00EFAE18 /* NightUI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04F5BAF81E670C3900EFAE18 /* NightUI.xcdatamodeld */; };
+		04F5BAFC1E670C3A00EFAE18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04F5BAFB1E670C3A00EFAE18 /* Assets.xcassets */; };
+		04F5BAFF1E670C3A00EFAE18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F5BAFD1E670C3A00EFAE18 /* LaunchScreen.storyboard */; };
+		04F5BB071E67226800EFAE18 /* MainNightVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F5BB061E67226800EFAE18 /* MainNightVC.swift */; };
+		04F5BB131E6755AE00EFAE18 /* LoginViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F5BB121E6755AE00EFAE18 /* LoginViewVC.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		04BF79741E67ED5300E3177B /* SignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		04F5BAEE1E670C3900EFAE18 /* NightUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NightUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		04F5BAF11E670C3900EFAE18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		04F5BAF61E670C3900EFAE18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		04F5BAF91E670C3900EFAE18 /* NightUI.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NightUI.xcdatamodel; sourceTree = "<group>"; };
+		04F5BAFB1E670C3A00EFAE18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		04F5BAFE1E670C3A00EFAE18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		04F5BB001E670C3A00EFAE18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04F5BB061E67226800EFAE18 /* MainNightVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNightVC.swift; sourceTree = "<group>"; };
+		04F5BB121E6755AE00EFAE18 /* LoginViewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewVC.swift; path = ../LoginViewVC.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		04F5BAEB1E670C3900EFAE18 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04F5BAE51E670C3900EFAE18 = {
+			isa = PBXGroup;
+			children = (
+				04F5BAF01E670C3900EFAE18 /* NightUI */,
+				04F5BAEF1E670C3900EFAE18 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		04F5BAEF1E670C3900EFAE18 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				04F5BAEE1E670C3900EFAE18 /* NightUI.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		04F5BAF01E670C3900EFAE18 /* NightUI */ = {
+			isa = PBXGroup;
+			children = (
+				04F5BAF11E670C3900EFAE18 /* AppDelegate.swift */,
+				04F5BB121E6755AE00EFAE18 /* LoginViewVC.swift */,
+				04F5BB061E67226800EFAE18 /* MainNightVC.swift */,
+				04F5BAF51E670C3900EFAE18 /* Main.storyboard */,
+				04BF79741E67ED5300E3177B /* SignUpVC.swift */,
+				04F5BAFB1E670C3A00EFAE18 /* Assets.xcassets */,
+				04F5BAFD1E670C3A00EFAE18 /* LaunchScreen.storyboard */,
+				04F5BB001E670C3A00EFAE18 /* Info.plist */,
+				04F5BAF81E670C3900EFAE18 /* NightUI.xcdatamodeld */,
+			);
+			path = NightUI;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		04F5BAED1E670C3900EFAE18 /* NightUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04F5BB031E670C3A00EFAE18 /* Build configuration list for PBXNativeTarget "NightUI" */;
+			buildPhases = (
+				04F5BAEA1E670C3900EFAE18 /* Sources */,
+				04F5BAEB1E670C3900EFAE18 /* Frameworks */,
+				04F5BAEC1E670C3900EFAE18 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NightUI;
+			productName = NightUI;
+			productReference = 04F5BAEE1E670C3900EFAE18 /* NightUI.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		04F5BAE61E670C3900EFAE18 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = Appinventiv;
+				TargetAttributes = {
+					04F5BAED1E670C3900EFAE18 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 04F5BAE91E670C3900EFAE18 /* Build configuration list for PBXProject "NightUI" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 04F5BAE51E670C3900EFAE18;
+			productRefGroup = 04F5BAEF1E670C3900EFAE18 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				04F5BAED1E670C3900EFAE18 /* NightUI */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		04F5BAEC1E670C3900EFAE18 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04F5BAFF1E670C3A00EFAE18 /* LaunchScreen.storyboard in Resources */,
+				04F5BAFC1E670C3A00EFAE18 /* Assets.xcassets in Resources */,
+				04F5BAF71E670C3900EFAE18 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		04F5BAEA1E670C3900EFAE18 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04BF79751E67ED5300E3177B /* SignUpVC.swift in Sources */,
+				04F5BAF21E670C3900EFAE18 /* AppDelegate.swift in Sources */,
+				04F5BB071E67226800EFAE18 /* MainNightVC.swift in Sources */,
+				04F5BAFA1E670C3A00EFAE18 /* NightUI.xcdatamodeld in Sources */,
+				04F5BB131E6755AE00EFAE18 /* LoginViewVC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		04F5BAF51E670C3900EFAE18 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04F5BAF61E670C3900EFAE18 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		04F5BAFD1E670C3A00EFAE18 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04F5BAFE1E670C3A00EFAE18 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		04F5BB011E670C3A00EFAE18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		04F5BB021E670C3A00EFAE18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		04F5BB041E670C3A00EFAE18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = NightUI/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Appinventiv.NightUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		04F5BB051E670C3A00EFAE18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = NightUI/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Appinventiv.NightUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		04F5BAE91E670C3900EFAE18 /* Build configuration list for PBXProject "NightUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04F5BB011E670C3A00EFAE18 /* Debug */,
+				04F5BB021E670C3A00EFAE18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04F5BB031E670C3A00EFAE18 /* Build configuration list for PBXNativeTarget "NightUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04F5BB041E670C3A00EFAE18 /* Debug */,
+				04F5BB051E670C3A00EFAE18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		04F5BAF81E670C3900EFAE18 /* NightUI.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				04F5BAF91E670C3900EFAE18 /* NightUI.xcdatamodel */,
+			);
+			currentVersion = 04F5BAF91E670C3900EFAE18 /* NightUI.xcdatamodel */;
+			path = NightUI.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 04F5BAE61E670C3900EFAE18 /* Project object */;
+}
