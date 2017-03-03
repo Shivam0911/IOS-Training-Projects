@@ -23,6 +23,10 @@ class MainNightVC: UIViewController {
 	
 	@IBOutlet weak var scrollViewBottomConstraint: NSLayoutConstraint!
 	
+	var loginViewVC : LoginViewVC? = nil
+	
+	var signUpVC : SignUpVC? = nil
+	
 	var currentPage = Int()
 	
 	//MARK: View Life Cycle
@@ -65,35 +69,31 @@ class MainNightVC: UIViewController {
 		
 		loginScrollView.isPagingEnabled = true
 		
-			let storyBoardScene = UIStoryboard(name: "Main", bundle: Bundle.main)
+		let storyBoardScene = UIStoryboard(name: "Main", bundle: Bundle.main)
 		
 		//register LoginVC
 
-		let loginViewVC = storyBoardScene.instantiateViewController(withIdentifier : "LoginViewVCID") as! LoginViewVC
+		loginViewVC = storyBoardScene.instantiateViewController(withIdentifier : "LoginViewVCID") as? LoginViewVC
 		
-		loginScrollView.addSubview(loginViewVC.view)
+		loginScrollView.addSubview((loginViewVC?.view)!)
 		
-		addChildViewController(loginViewVC)
+		addChildViewController(loginViewVC!)
 		
-		loginViewVC.didMove(toParentViewController: self)
+		loginViewVC?.didMove(toParentViewController: self)
 		
 		//register SignUpVC
 		
-		let  signUpVC = storyBoardScene.instantiateViewController(withIdentifier : "SignUpVCID") as! SignUpVC
+		signUpVC = storyBoardScene.instantiateViewController(withIdentifier : "SignUpVCID") as? SignUpVC
 		
-		loginScrollView.addSubview(signUpVC.view)
+		loginScrollView.addSubview((signUpVC?.view)!)
 		
-		addChildViewController(signUpVC)
+		addChildViewController(signUpVC!)
 		
-		signUpVC.didMove(toParentViewController: self)
+		signUpVC?.didMove(toParentViewController: self)
 		
-		//change origin x
-		
-		signUpVC.view.frame.origin.x =  self.view.bounds.size.width
+		//scrollView Properties Set
 		
 		loginScrollView.showsHorizontalScrollIndicator = false
-		
-		loginScrollView.contentSize = CGSize(width: self.view.bounds.width * CGFloat(2), height : loginScrollView.frame.height )
 		
 		loginScrollView.showsHorizontalScrollIndicator = true
 		
@@ -103,10 +103,27 @@ class MainNightVC: UIViewController {
 		
 		signUpButton.addTarget(self, action: #selector(signUpButtonTapped(_ : ) ), for: .touchUpInside)
 		
-		loginViewVC.signUpButton.addTarget(self, action: #selector(signUpButtonTapped(_ : ) ), for: .touchUpInside)
+		loginViewVC?.signUpButton.addTarget(self, action: #selector(signUpButtonTapped(_ : ) ), for: .touchUpInside)
 		
-		signUpVC.signInButton.addTarget(self, action: #selector(signInButtonTapped(_ : ) ), for: .touchUpInside)
+		signUpVC?.signInButton.addTarget(self, action: #selector(signInButtonTapped(_ : ) ), for: .touchUpInside)
 
+	}
+	
+	override func viewWillLayoutSubviews() {
+		
+		//change origin x
+		
+		signUpVC?.view.frame.origin.x =  self.view.bounds.size.width
+		
+		loginScrollView.contentSize = CGSize(width: self.view.bounds.width * CGFloat(2), height : loginScrollView.frame.height )
+		
+		loginScrollView.frame.size.width =  self.view.frame.width
+		
+		signUpVC?.view.frame.size.width = loginScrollView.frame.size.width
+		
+		loginViewVC?.view.frame.size.width = loginScrollView.frame.size.width
+		
+		
 	}
 	
 
